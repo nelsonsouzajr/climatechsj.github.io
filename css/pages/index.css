@@ -1,0 +1,329 @@
+/* pages/index.css */
+
+/* ---------- HERO SECTION (Compacto & Lateral) ---------- */
+.index-hero {
+  /* Altura ajustada: Menor que antes para caber em notebooks */
+  min-height: 85vh; 
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+  padding-top: 90px; /* Compensar header */
+  padding-bottom: 40px;
+}
+
+.hero-grid {
+  display: grid;
+  /* Coluna Esquerda (Flexível) | Coluna Direita (Fixa e Estreita) */
+  grid-template-columns: 1fr 220px; 
+  gap: 60px;
+  width: 100%;
+  align-items: center;
+}
+
+/* --- LADO ESQUERDO: CONTEÚDO --- */
+.hero-content {
+  max-width: 800px; /* Limita largura do texto para leitura confortável */
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid var(--primary);
+  border-radius: 30px;
+  font-size: 0.8rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  /* Reduzi um pouco a fonte máxima */
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  color: var(--text);
+}
+
+.hero-title span {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-description {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 35px;
+  max-width: 550px;
+  line-height: 1.6;
+}
+
+/* CARDS DE DECISÃO */
+.decision-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.decision-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.decision-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  background: var(--bg-card-hover);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card-icon-box {
+  width: 45px;
+  height: 45px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--primary);
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+
+.decision-card:hover .card-icon-box {
+  background: var(--primary);
+  color: #fff;
+}
+
+.card-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.card-info p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Seta animada */
+.card-arrow {
+  margin-left: auto;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: 0.3s;
+  color: var(--primary);
+}
+
+.decision-card:hover .card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* --- LADO DIREITO: CAROUSEL VERTICAL (SLIM) --- */
+.hero-carousel-col {
+  height: 70vh; /* Altura visual do carousel */
+  position: relative;
+  overflow: hidden; /* Esconde o que sai */
+  
+  /* Gradiente para suavizar topo e base (Fade effect) */
+  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}
+
+.carousel-track {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: scrollUp 40s linear infinite;
+  width: 100%;
+}
+
+/* Pausar animação ao passar o mouse para ver detalhes */
+.hero-carousel-col:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+.tech-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  backdrop-filter: blur(5px);
+  transition: 0.3s;
+}
+
+.tech-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--primary);
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.tech-card i {
+  font-size: 28px;
+  width: 30px; /* Alinhamento fixo */
+  text-align: center;
+}
+
+.tech-card span {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+@keyframes scrollUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); } /* Move metade da altura total */
+}
+
+/* Responsivo Mobile */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr; /* Vira uma coluna só */
+    text-align: center;
+  }
+  
+  .hero-carousel-col {
+    display: none; /* Esconde carousel vertical no mobile para não ocupar tela */
+    /* Opcional: Você pode reativar como horizontal se quiser, mas vertical no mobile fica ruim */
+  }
+
+  .hero-content { margin: 0 auto; }
+  .decision-wrapper { text-align: left; }
+  .decision-card { padding: 15px; }
+  
+  /* Ajuste para centralizar tags no mobile */
+  .hero-tag { margin: 0 auto 20px; }
+}
+
+/* ---------- SEÇÃO SOBRE (REVAMPED) ---------- */
+.about-section {
+  padding: 100px 0;
+  background: var(--bg-solid);
+  position: relative;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, var(--text) 0%, var(--text-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+.highlight-box {
+  margin-top: 30px;
+  padding: 20px;
+  border-left: 4px solid var(--primary);
+  background: var(--bg-card);
+  border-radius: 0 12px 12px 0;
+}
+
+/* Stats Grid Melhorado */
+.stats-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.stat-card {
+  background: var(--bg-card); /* Usa a variável corrigida no theme.css */
+  padding: 30px 20px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.stat-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .stats-container { grid-template-columns: 1fr 1fr; } /* Mantém 2 colunas no mobile */
+}
+
+/* HARDWARE: Tons de Ciano e Azul (Fixo) */
+.index-hero .hero-title span.text-hardware {
+  background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Fallback padrão */
+  
+  /* Garante que a sombra do tema não ofusque o gradiente */
+  text-shadow: none; 
+  filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.3));
+}
+
+/* SOFTWARE: Tons de Roxo e Rosa (Fixo) */
+.index-hero .hero-title span.text-software {
+  background: linear-gradient(135deg, #9333ea 0%, #db2777 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Fallback padrão */
+  
+  /* Garante que a sombra do tema não ofusque o gradiente */
+  text-shadow: none;
+  filter: drop-shadow(0 0 10px rgba(147, 51, 234, 0.3));
+}

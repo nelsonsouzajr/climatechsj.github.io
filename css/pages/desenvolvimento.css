@@ -1,0 +1,257 @@
+/* css/desenvolvimento.css - ARQUIVO COMPLETO */
+
+/* ========================================= */
+/* HERO: TECH FLOATING BACKGROUND (Novos Cards Espalhados) */
+/* ========================================= */
+
+/* O container Hero precisa ser relativo */
+.index-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Garante que o texto fique ACIMA dos cards flutuantes */
+.index-hero .container {
+    position: relative;
+    z-index: 20;
+}
+
+/* Estilo Base dos Cards Flutuantes */
+.float-card {
+    position: absolute;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+    
+    /* Efeito Vidro */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    /* Comportamento */
+    z-index: 1; /* Fica atrás do texto */
+    opacity: 0.6; /* Transparência inicial */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+    will-change: transform;
+}
+
+/* Hover no Card Flutuante (Destaque) */
+.float-card:hover {
+    transform: scale(1.2) !important; /* Pausa visualmente o movimento */
+    border-color: var(--primary);
+    background: var(--bg-card-hover);
+    opacity: 1;
+    z-index: 50; /* Traz para frente de tudo */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.float-card i {
+    font-size: 1.2rem;
+}
+
+/* --- ANIMAÇÕES DE FLUTUAÇÃO (Longa Duração) --- */
+
+@keyframes drift-slow {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(40px, -30px) rotate(3deg); }
+}
+
+@keyframes drift-medium {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-30px, 40px); }
+}
+
+@keyframes drift-vertical {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+}
+
+/* --- POSICIONAMENTO DOS 10 CARDS --- */
+
+/* Canto Superior Esquerdo */
+.tech-java { top: 18%; left: 8%; animation: drift-slow 35s ease-in-out infinite; }
+.tech-html { top: 28%; left: 20%; animation: drift-vertical 28s ease-in-out infinite 2s; }
+
+/* Canto Superior Direito */
+.tech-react { top: 22%; right: 10%; animation: drift-medium 30s ease-in-out infinite 1s; }
+.tech-aws { top: 12%; right: 28%; animation: drift-slow 40s ease-in-out infinite 5s; }
+
+/* Centro / Meio (Afastados do texto central) */
+.tech-node { top: 55%; left: 15%; animation: drift-slow 32s ease-in-out infinite 3s; }
+.tech-docker { top: 50%; right: 18%; animation: drift-medium 36s ease-in-out infinite 0.5s; }
+
+/* Canto Inferior Esquerdo */
+.tech-python { bottom: 18%; left: 10%; animation: drift-medium 38s ease-in-out infinite 4s; }
+.tech-vue { bottom: 8%; left: 35%; animation: drift-slow 30s ease-in-out infinite 1.5s; }
+
+/* Canto Inferior Direito */
+.tech-sql { bottom: 22%; right: 12%; animation: drift-vertical 34s ease-in-out infinite 2.5s; }
+.tech-angular { bottom: 10%; right: 38%; animation: drift-slow 29s ease-in-out infinite 3.5s; }
+
+
+/* --- AJUSTE MOBILE --- */
+@media (max-width: 900px) {
+    .float-card { 
+        transform: scale(0.8); 
+        opacity: 0.25; /* Mais sutil ainda no mobile */
+        padding: 6px 12px;
+    }
+    /* Esconder os cards que ficariam embaixo do texto no mobile */
+    .tech-aws, .tech-docker, .tech-vue, .tech-sql, .tech-html { display: none; }
+    
+    .tech-java { top: 10%; left: 5%; }
+    .tech-react { top: 10%; right: 5%; }
+    .tech-node { bottom: 10%; left: 5%; }
+    .tech-python { bottom: 10%; right: 5%; }
+}
+
+/* ========================================= */
+/* SEÇÃO DE SERVIÇOS (GRID) */
+/* ========================================= */
+.dev-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.dev-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 35px 30px;
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito Neon/Glow no Hover */
+.dev-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15), inset 0 0 20px rgba(99, 102, 241, 0.05);
+}
+
+.dev-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 4px; height: 100%;
+    background: var(--primary);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.dev-card:hover::before { opacity: 1; }
+
+.dev-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* Tags de tecnologia dentro do card */
+.tech-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 6px;
+    margin-right: 6px;
+    margin-top: 15px;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+}
+
+/* ========================================= */
+/* PROCESSO (TIMELINE) */
+/* ========================================= */
+.process-wrapper {
+    position: relative;
+    margin-top: 60px;
+}
+
+/* Linha conectora (Desktop apenas) */
+.process-line {
+    position: absolute;
+    top: 25px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: var(--border);
+    z-index: 0;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    gap: 20px;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    background: var(--bg); /* Fundo sólido para cobrir a linha */
+    padding: 10px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.step:hover { transform: translateY(-5px); }
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-card);
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin: 0 auto 15px;
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.15);
+}
+
+@media (max-width: 768px) {
+    .process-line { display: none; }
+    .process-steps { flex-direction: column; gap: 40px; }
+}
+
+/* ========================================= */
+/* CONTATO (SPLIT LAYOUT) */
+/* ========================================= */
+.contact-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.contact-info h2 { font-size: 2.5rem; margin-bottom: 20px; }
+
+.contact-highlight {
+    margin-top: 30px;
+    padding: 25px;
+    background: var(--bg-card);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 12px 12px 0;
+}
+
+@media (max-width: 900px) {
+    .contact-split { grid-template-columns: 1fr; gap: 40px; }
+}

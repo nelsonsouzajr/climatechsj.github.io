@@ -1,0 +1,106 @@
+/* css/assistencia.css */
+
+
+
+/* ---------- SERVIÇOS (GRID & IMAGENS) ---------- */
+.service-grid-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card img {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* ---------- CAROUSEL DE DEPOIMENTOS ---------- */
+.testimonials-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Permite rolagem */
+    padding: 20px 5px;
+    cursor: grab;
+    
+    /* Esconde a barra de rolagem nativa */
+    scrollbar-width: none;       /* Firefox */
+    -ms-overflow-style: none;    /* IE/Edge */
+}
+
+/* Esconde barra no Chrome/Safari */
+.testimonials-carousel::-webkit-scrollbar { 
+    display: none; 
+}
+
+.testimonials-carousel.dragging { 
+    cursor: grabbing; 
+    scroll-behavior: auto; 
+}
+
+/* Card Específico do Depoimento */
+.testimonial-card {
+    min-width: 320px; /* Largura fixa para garantir uniformidade */
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0; /* Impede que o card encolha */
+    
+    /* Garante altura igual para todos */
+    height: 100%; 
+}
+
+.stars { 
+    color: #fbbf24; /* Amarelo ouro */
+    margin-top: 15px; 
+    font-size: 0.95rem; 
+}
+
+.author { 
+    font-weight: 700; 
+    color: var(--primary); 
+    margin-top: 5px; 
+}
+
+/* ---------- SEÇÃO CONTATO (SPLIT LAYOUT) ---------- */
+.contact-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.contact-item i {
+    width: 40px;
+    height: 40px;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+@media (max-width: 900px) {
+    .contact-split { grid-template-columns: 1fr; gap: 40px; }
+}

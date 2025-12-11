@@ -1,0 +1,55 @@
+/* Utilitários de Animação */
+.mouse-halo { 
+  will-change: transform, opacity, left, top; 
+  pointer-events: none;
+}
+
+/* ---------- KEYFRAMES ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 10px var(--primary); }
+  50% { box-shadow: 0 0 25px var(--primary-bright); }
+}
+
+@keyframes themePulse {
+  0% { transform: scale(0); opacity: 0.8; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Elemento de Animação de Tema */
+.theme-circle {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+  animation: themePulse 0.5s ease-out forwards;
+}
+
+/* Parallax básico */
+.hero-media img {
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
