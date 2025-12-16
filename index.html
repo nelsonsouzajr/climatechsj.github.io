@@ -16,11 +16,11 @@
 
     <nav class="navbar">
       <div class="nav-wrapper">
-        <a href="index.html" class="logo">nTech<span>Brasil</span></a>
+        <a href="index.html" class="imglogo"><img src="assets/logo.png" /></a>
 
         <div class="menu" id="mainMenu">
           <a href="../index.html" data-i18n="nav_home">Início</a>
-          <a href="#about">Sobre</a>
+          <a href="#about" data-i18n="nav_about">Sobre</a>
           <a href="pages/assistencia.html" data-i18n="nav_hardware"
             >Manutenção</a
           >
@@ -60,25 +60,25 @@
     </nav>
 
     <main class="page">
-      <section class="index-hero" id="hero">
+      <section class="index-hero" id="hero">        
         <div class="hero-light"></div>
         <div class="container">
           <div class="hero-grid">
             <div class="hero-content" data-reveal>
               <div class="hero-tag">
                 <i class="fas fa-laptop-medical"></i>
-                <span data-i18n="hero_tag">Soluções em T.I.</span>
+                <span data-i18n="hero_tag">Tecnologia & Inovação</span>
               </div>
 
-              <h1 class="hero-title">
+              <h1 class="hero-title" data-i18n="hero_title">
                 Do <span class="text-hardware">Reparo</span> ao
                 <span class="text-software">Código</span>
               </h1>
 
               <p class="hero-description" data-i18n="hero_desc">
-                Precisa consertar seu computador ou criar um sistema para sua
-                empresa? Sou Nelson Jr, Engenheiro de Computação. Escolha abaixo
-                como posso te ajudar hoje:
+                A ponte entre o mundo físico e o digital. Especialista em
+                manutenção de alto nível e desenvolvimento de sistemas
+                complexos.
               </p>
 
               <div class="decision-wrapper">
@@ -94,7 +94,10 @@
                   <i class="fas fa-arrow-right card-arrow"></i>
                 </a>
 
-                <a href="pages/assistencia.html" class="decision-card choice-btn">
+                <a
+                  href="pages/desenvolvimento.html"
+                  class="decision-card choice-btn"
+                >
                   <div class="card-icon-box"><i class="fas fa-code"></i></div>
                   <div class="card-info">
                     <h3 data-i18n="card_soft_title">Desenvolvimento</h3>
@@ -197,17 +200,24 @@
         <div class="container">
           <div class="about-grid">
             <div class="about-text" data-reveal>
-              <div class="hero-tag" style="margin-bottom: 15px">
+              <div
+                class="hero-tag"
+                style="margin-bottom: 15px"
+                data-i18n="about_tag"
+              >
                 Engenharia Computacional
               </div>
-              <h2>A Diferença entre consertar <br />e Solucionar.</h2>
+              <!-- data-i18n="about_title" adicionado aqui -->
+              <h2 data-i18n="about_title">
+                A Diferença entre consertar <br />e Solucionar.
+              </h2>
 
-              <p>
+              <p data-i18n="about_p1">
                 Muitos olham para o computador e veem apenas peças. Outros olham
                 para o código e veem apenas linhas.
                 <strong>Na nTech, nós vemos o sistema completo.</strong>
               </p>
-              <p>
+              <p data-i18n="about_p2">
                 Como Engenheiro de Computação, unifico o conhecimento profundo
                 de hardware com a lógica avançada de software. Isso significa
                 diagnósticos precisos que economizam seu dinheiro e sistemas
@@ -215,7 +225,10 @@
               </p>
 
               <div class="highlight-box">
-                <p style="margin: 0; font-style: italic; color: var(--text)">
+                <p
+                  style="margin: 0; font-style: italic; color: var(--text)"
+                  data-i18n="about_quote"
+                >
                   "Não entregamos apenas o serviço, entregamos a tranquilidade
                   de saber que foi feito por um especialista."
                 </p>
@@ -224,39 +237,49 @@
 
             <div class="stats-container" data-reveal>
               <div class="stat-card card">
-                <span class="stat-number">15+</span>
-                <span class="stat-label">Anos de Experiência</span>
+                <span class="stat-number">+15</span>
+                <span class="stat-label" data-i18n="stat_exp_label"
+                  >Anos de Experiência</span
+                >
               </div>
 
               <div class="stat-card card">
                 <span class="stat-number">100%</span>
-                <span class="stat-label">Comprometimento</span>
+                <span class="stat-label" data-i18n="stat_commit_label"
+                  >Comprometimento</span
+                >
               </div>
 
               <div class="stat-card card">
-                <span class="stat-number" style="font-size: 2.5rem"
-                  ><i class="fas fa-user-graduate"></i
-                ></span>
+                <span class="stat-number" style="font-size: 2.5rem">
+                  <i class="fas fa-user-graduate"></i>
+                </span>
                 <span
                   class="stat-label"
                   style="display: block; margin-top: 10px"
-                  >Profissional Altamente Qualificado</span
+                  data-i18n="stat_qualif_label"
                 >
+                  Profissional Altamente Qualificado
+                </span>
                 <span
                   style="
                     font-size: 0.8rem;
                     color: var(--text-secondary);
                     display: block;
                   "
-                  >Técnico e Engenheiro da computação</span
+                  data-i18n="stat_qualif_subtitle"
                 >
+                  Técnico e Engenheiro da computação
+                </span>
               </div>
 
               <div class="stat-card card">
-                <span class="stat-number"
-                  ><i class="fas fa-check-circle"></i
-                ></span>
-                <span class="stat-label">Garantia Total</span>
+                <span class="stat-number">
+                  <i class="fas fa-check-circle"></i>
+                </span>
+                <span class="stat-label" data-i18n="stat_guarantee_label"
+                  >Garantia Total</span
+                >
               </div>
             </div>
           </div>
@@ -271,17 +294,28 @@
         "
       >
         <div class="container" style="text-align: center">
+          <!-- O logo geralmente não é traduzido, mas o slogan sim -->
           <a href="#" class="logo" style="font-size: 24px"
             >nTech<span>Brasil</span></a
           >
-          <p style="color: var(--text-secondary); margin-top: 10px">
+
+          <p
+            style="color: var(--text-secondary); margin-top: 10px"
+            data-i18n="footer_slogan"
+          >
             Onde a tecnologia encontra a excelência em serviço. Seu parceiro
             confiável em hardware e software.
           </p>
-          <p style="color: var(--text-muted); margin-top: 15px">
+
+          <p
+            style="color: var(--text-muted); margin-top: 15px"
+            data-i18n="footer_copyright"
+          >
             &copy; 2025 Nelson Pereira de Souza Junior. Todos os direitos
             reservados.
           </p>
+
+          <!-- Os ícones sociais (Instagram, LinkedIn, GitHub) são universais e não requerem tradução -->
           <div
             style="
               margin-top: 20px;

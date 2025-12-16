@@ -36,7 +36,8 @@
 
 /* Ajuste do Hero no Dark Mode */
 [data-theme="dark"] .index-hero {
-  background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+  background: radial-gradient(circle at top, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%), 
+              url('../assets/images/wallpaper2.png');
 }
 
 [data-theme="dark"] .index-hero .hero-title {
