@@ -185,3 +185,40 @@ Valores:
 - Melhor leitura de etapa de funil por campanha
 - Acompanhamento de contato iniciado vs lead confirmado
 - Segmentacao mais precisa para remarketing
+
+## Fase 6 - Teste A/B e relatorio por landing
+### Teste A/B de headline/CTA
+Arquivos:
+- js/ab-testing.js
+- pages/instalacao.html
+- pages/manutencao.html
+- pages/higienizacao.html
+- pages/pmoc.html
+
+Como funciona:
+- Elementos com data-ab-test, data-ab-a e data-ab-b recebem variacao A/B automaticamente.
+- Variante e estavel por campanha/cidade (persistida no localStorage).
+- Evento ab_variant_assigned e enviado para analise.
+
+Segmentacao de cidade:
+- Parametro city na URL (quando informado)
+- fallback por utm_term
+- fallback final para regiao
+
+### Relatorio local por landing
+Arquivos:
+- pages/relatorio.html
+- js/report.js
+
+Fonte de dados:
+- agregado local no navegador via chave ntech-event-stats-v1
+
+Metricas exibidas:
+- View Content
+- Contatos
+- Leads
+- Taxa de contato por landing
+- Taxa de lead por landing
+
+Observacao:
+- O relatorio e local (navegador atual), ideal para validacao rapida durante testes de campanha.

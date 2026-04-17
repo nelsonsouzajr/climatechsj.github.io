@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relatorio Local de Performance | NTech Climatizacao</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-wrapper">
+        <a href="../index.html" class="imglogo"><img src="../assets/logo.png" alt="NTech" /></a>
+        <div class="menu" id="mainMenu">
+          <a href="../index.html">Inicio</a>
+          <a href="#dashboard">Dashboard</a>
+        </div>
+        <div class="actions">
+          <button class="btn-icon" id="theme-toggle" aria-label="Alternar Tema"><i class="fas fa-sun"></i></button>
+          <button class="hamburger" id="menuToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="page" id="dashboard">
+      <section style="padding: 70px 0">
+        <div class="container">
+          <div class="hero-tag" style="margin-bottom: 12px">Performance Local</div>
+          <h1 style="margin-bottom: 10px">Relatorio de funil por landing</h1>
+          <p id="reportSummary" style="color: var(--text-secondary); margin-bottom: 18px">
+            Carregando dados locais...
+          </p>
+
+          <div class="card" style="overflow-x: auto">
+            <table style="width: 100%; border-collapse: collapse; min-width: 760px">
+              <thead>
+                <tr>
+                  <th style="text-align: left; padding: 10px; border-bottom: 1px solid var(--border)">Landing</th>
+                  <th style="text-align: left; padding: 10px; border-bottom: 1px solid var(--border)">View Content</th>
+                  <th style="text-align: left; padding: 10px; border-bottom: 1px solid var(--border)">Contatos</th>
+                  <th style="text-align: left; padding: 10px; border-bottom: 1px solid var(--border)">Leads</th>
+                  <th style="text-align: left; padding: 10px; border-bottom: 1px solid var(--border)">Taxa Contato</th>
+                  <th style="text-align: left; padding: 10px; border-bottom: 1px solid var(--border)">Taxa Lead</th>
+                </tr>
+              </thead>
+              <tbody id="reportBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/report.js"></script>
+  </body>
+</html>

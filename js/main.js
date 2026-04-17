@@ -6,6 +6,7 @@ import { initAnimations } from "./animations.js";
 import { initForms } from "./forms.js";
 import { initCarousel } from "./carousel.js";
 import { initMarketing } from "./marketing.js";
+import { initAbTesting } from "./ab-testing.js";
 
 // Aguarda o DOM estar pronto para evitar erros de "element not found"
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,4 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 7. Inicializa rastreio de marketing e origem de lead
   initMarketing();
+
+  // 8. Inicializa testes A/B de copy por campanha/cidade
+  initAbTesting();
 });

@@ -3,6 +3,7 @@ import { $$ } from "./utils.js";
 import { ANALYTICS_CONFIG } from "./analytics-config.js";
 
 const STORAGE_KEY = "ntech-attribution";
+const EVENT_STATS_KEY = "ntech-event-stats-v1";
 const TRACK_PARAMS = [
   "utm_source",
   "utm_medium",
@@ -120,6 +121,15 @@ export function trackLeadSubmit(metadata = {}) {
   });
 }
 
+export function trackCustomEvent(eventName, metadata = {}) {
+  const attribution = getAttribution();
+  pushTrackingEvent(eventName, {
+    page_path: window.location.pathname,
+    ...attribution,
+    ...metadata
+  });
+}
+
 function trackPageView() {
   const attribution = getAttribution();
   pushTrackingEvent("page_view_custom", {
@@ -210,6 +220,7 @@ function pushTrackingEvent(eventName, payload) {
 
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push(eventPayload);
+  persistEventStats(eventName, payload);
 
   if (typeof window.gtag === "function") {
     window.gtag("event", eventName, payload);
@@ -242,5 +253,37 @@ function pushTrackingEvent(eventName, payload) {
         source: payload.utm_source || "direct"
       });
     }
+  }
+}
+
+function persistEventStats(eventName, payload) {
+  try {
+    const raw = localStorage.getItem(EVENT_STATS_KEY);
+    const state = raw ? JSON.parse(raw) : {};
+
+    const campaign = payload.utm_campaign || "organic";
+    const page = payload.page_path || window.location.pathname;
+    const variant = payload.ab_variant || "-";
+    const testName = payload.ab_test || "-";
+    const key = `${eventName}|${page}|${campaign}|${testName}|${variant}`;
+
+    const current = state[key] || {
+      event: eventName,
+      page,
+      campaign,
+      test: testName,
+      variant,
+      count: 0,
+      firstSeenAt: new Date().toISOString(),
+      lastSeenAt: new Date().toISOString()
+    };
+
+    current.count += 1;
+    current.lastSeenAt = new Date().toISOString();
+    state[key] = current;
+
+    localStorage.setItem(EVENT_STATS_KEY, JSON.stringify(state));
+  } catch {
+    // Nao bloquear fluxo de conversao por falha de localStorage
   }
 }
