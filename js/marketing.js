@@ -15,6 +15,7 @@ const TRACK_PARAMS = [
 export function initMarketing() {
   persistAttribution();
   enhanceWhatsAppLinks();
+  trackPageView();
   bindWhatsAppTracking();
 }
 
@@ -78,9 +79,7 @@ function bindWhatsAppTracking() {
         link_text: (link.textContent || "").trim(),
         ...attribution
       };
-
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push(eventPayload);
+      pushTrackingEvent("whatsapp_click", eventPayload);
     });
   });
 }
@@ -107,4 +106,47 @@ function enhanceWhatsAppLinks() {
       // Mantem o link original em caso de URL invalida
     }
   });
+}
+
+export function trackLeadSubmit(metadata = {}) {
+  const attribution = getAttribution();
+  pushTrackingEvent("lead_submit", {
+    page_path: window.location.pathname,
+    ...attribution,
+    ...metadata
+  });
+}
+
+function trackPageView() {
+  const attribution = getAttribution();
+  pushTrackingEvent("page_view_custom", {
+    page_path: window.location.pathname,
+    page_title: document.title,
+    ...attribution
+  });
+}
+
+function pushTrackingEvent(eventName, payload) {
+  const eventPayload = {
+    event: eventName,
+    ...payload
+  };
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(eventPayload);
+
+  if (typeof window.gtag === "function") {
+    window.gtag("event", eventName, payload);
+  }
+
+  if (typeof window.fbq === "function") {
+    const isLead = eventName === "lead_submit" || eventName === "whatsapp_click";
+    if (isLead) {
+      window.fbq("track", "Lead", {
+        content_name: payload.page_path || window.location.pathname,
+        source: payload.utm_source || "direct",
+        campaign: payload.utm_campaign || "organic"
+      });
+    }
+  }
 }

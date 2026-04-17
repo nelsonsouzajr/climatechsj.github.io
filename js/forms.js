@@ -1,6 +1,7 @@
 // forms.js – Formulários e Máscaras
 import { $, $$, showToast } from "./utils.js";
 import { getAttribution } from "./marketing.js";
+import { trackLeadSubmit } from "./marketing.js";
 
 export function initForms() {
   // 1. Máscara de Telefone
@@ -56,6 +57,10 @@ export function initForms() {
 
         if (response.ok) {
           showToast("Mensagem enviada com sucesso!", "success");
+          trackLeadSubmit({
+            conversion_type: "form_submit",
+            form_action: form.action
+          });
           form.reset();
         } else {
           showToast("Erro ao enviar. Tente novamente.", "error");
