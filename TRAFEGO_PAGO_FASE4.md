@@ -1,4 +1,4 @@
-# Trafego Pago - Documentacao Tecnica e Comercial (Fase 4)
+# Trafego Pago - Documentacao Tecnica e Comercial
 
 ## Objetivo
 Este documento centraliza as informacoes de estrutura, funil, rastreamento e copy das paginas voltadas para aquisicao ativa de clientes por marketing digital.
@@ -131,3 +131,57 @@ Arquivo: index.html
 - Criar dashboard simples de conversao por campanha.
 - Executar teste A/B de headline nas 4 landings.
 - Criar extensoes de anuncio com prova local (cidade + horario + WhatsApp).
+
+## Fase 5 - Implementacao concluida
+### Configuracao central de analytics
+Arquivo: js/analytics-config.js
+
+Campos disponiveis:
+- ga4MeasurementId
+- metaPixelId
+
+Como ativar:
+1. Abrir js/analytics-config.js
+2. Preencher ga4MeasurementId com seu ID GA4 (exemplo: G-XXXXXXXXXX)
+3. Preencher metaPixelId com seu Pixel ID Meta
+
+### Inicializacao automatica de providers
+Arquivo: js/marketing.js
+
+Ao iniciar o site:
+- inicializa GA4 dinamicamente quando ga4MeasurementId estiver preenchido
+- inicializa Meta Pixel dinamicamente quando metaPixelId estiver preenchido
+- mantem funcionamento com fallback seguro quando IDs nao estiverem configurados
+
+### Eventos de funil padronizados
+Eventos atuais:
+- page_view_custom
+- view_content
+- whatsapp_click
+- initiate_contact
+- lead_submit
+
+Mapeamento Meta Pixel:
+- view_content -> ViewContent
+- initiate_contact / whatsapp_click -> Contact
+- lead_submit -> Lead
+
+Mapeamento GA4:
+- envio via gtag quando disponivel
+
+### Classificacao da pagina para analise
+Campo enviado:
+- service_page_type
+
+Valores:
+- home
+- instalacao
+- manutencao
+- higienizacao
+- pmoc
+- conteudo
+
+### Resultado esperado para mídia paga
+- Melhor leitura de etapa de funil por campanha
+- Acompanhamento de contato iniciado vs lead confirmado
+- Segmentacao mais precisa para remarketing

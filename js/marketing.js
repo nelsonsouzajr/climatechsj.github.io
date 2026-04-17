@@ -1,5 +1,6 @@
 // marketing.js - Captura de origem de campanha e eventos de conversao
 import { $$ } from "./utils.js";
+import { ANALYTICS_CONFIG } from "./analytics-config.js";
 
 const STORAGE_KEY = "ntech-attribution";
 const TRACK_PARAMS = [
@@ -13,9 +14,11 @@ const TRACK_PARAMS = [
 ];
 
 export function initMarketing() {
+  initAnalyticsProviders();
   persistAttribution();
   enhanceWhatsAppLinks();
   trackPageView();
+  trackViewContent();
   bindWhatsAppTracking();
 }
 
@@ -74,12 +77,12 @@ function bindWhatsAppTracking() {
     link.addEventListener("click", () => {
       const attribution = getAttribution();
       const eventPayload = {
-        event: "whatsapp_click",
         page_path: window.location.pathname,
         link_text: (link.textContent || "").trim(),
         ...attribution
       };
       pushTrackingEvent("whatsapp_click", eventPayload);
+      pushTrackingEvent("initiate_contact", eventPayload);
     });
   });
 }
@@ -126,6 +129,79 @@ function trackPageView() {
   });
 }
 
+function trackViewContent() {
+  const attribution = getAttribution();
+  pushTrackingEvent("view_content", {
+    page_path: window.location.pathname,
+    page_title: document.title,
+    service_page_type: getServicePageType(),
+    ...attribution
+  });
+}
+
+function getServicePageType() {
+  const path = window.location.pathname.toLowerCase();
+  if (path.includes("instalacao")) return "instalacao";
+  if (path.includes("manutencao")) return "manutencao";
+  if (path.includes("higienizacao")) return "higienizacao";
+  if (path.includes("pmoc")) return "pmoc";
+  if (path.includes("dicas")) return "conteudo";
+  return "home";
+}
+
+function initAnalyticsProviders() {
+  initGa4();
+  initMetaPixel();
+}
+
+function initGa4() {
+  const measurementId = ANALYTICS_CONFIG.ga4MeasurementId;
+  if (!measurementId) return;
+  if (document.getElementById("ntech-ga4-script")) return;
+
+  const script = document.createElement("script");
+  script.id = "ntech-ga4-script";
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
+  window.gtag("js", new Date());
+  window.gtag("config", measurementId, { send_page_view: false });
+}
+
+function initMetaPixel() {
+  const pixelId = ANALYTICS_CONFIG.metaPixelId;
+  if (!pixelId) return;
+  if (window.fbq) return;
+
+  // Snippet padrao Meta Pixel com protecao para inicializacao unica
+  (function (f, b, e, v, n, t, s) {
+    if (f.fbq) return;
+    n = f.fbq = function () {
+      if (n.callMethod) {
+        n.callMethod.apply(n, arguments);
+      } else {
+        n.queue.push(arguments);
+      }
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = true;
+    n.version = "2.0";
+    n.queue = [];
+    t = b.createElement(e);
+    t.async = true;
+    t.src = v;
+    s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s);
+  })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+
+  window.fbq("init", pixelId);
+  window.fbq("track", "PageView");
+}
+
 function pushTrackingEvent(eventName, payload) {
   const eventPayload = {
     event: eventName,
@@ -140,12 +216,30 @@ function pushTrackingEvent(eventName, payload) {
   }
 
   if (typeof window.fbq === "function") {
-    const isLead = eventName === "lead_submit" || eventName === "whatsapp_click";
+    const isLead = eventName === "lead_submit";
+    const isContact = eventName === "whatsapp_click" || eventName === "initiate_contact";
+    const isViewContent = eventName === "view_content";
+
     if (isLead) {
       window.fbq("track", "Lead", {
         content_name: payload.page_path || window.location.pathname,
         source: payload.utm_source || "direct",
         campaign: payload.utm_campaign || "organic"
+      });
+    }
+
+    if (isContact) {
+      window.fbq("track", "Contact", {
+        content_name: payload.page_path || window.location.pathname,
+        source: payload.utm_source || "direct",
+        campaign: payload.utm_campaign || "organic"
+      });
+    }
+
+    if (isViewContent) {
+      window.fbq("track", "ViewContent", {
+        content_name: payload.service_page_type || payload.page_path || window.location.pathname,
+        source: payload.utm_source || "direct"
       });
     }
   }
