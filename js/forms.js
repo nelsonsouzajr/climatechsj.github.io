@@ -1,5 +1,6 @@
 // forms.js – Formulários e Máscaras
 import { $, $$, showToast } from "./utils.js";
+import { getAttribution } from "./marketing.js";
 
 export function initForms() {
   // 1. Máscara de Telefone
@@ -34,6 +35,17 @@ export function initForms() {
 
       try {
         const formData = new FormData(form);
+
+        // Anexa dados de campanha/origem para rastrear de onde o lead veio
+        const attribution = getAttribution();
+        Object.entries(attribution).forEach(([key, value]) => {
+          if (value !== undefined && value !== null && value !== "") {
+            formData.append(key, String(value));
+          }
+        });
+        formData.append("lead_page", window.location.pathname);
+        formData.append("lead_timestamp", new Date().toISOString());
+
         const response = await fetch(form.action, {
           method: "POST",
           body: formData,

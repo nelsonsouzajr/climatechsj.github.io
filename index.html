@@ -1,9 +1,100 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>nTech Solutions | Nelson Jr</title>
+    <title>NTech Climatizacao | Ar-Condicionado Residencial e Comercial</title>
+    <meta
+      name="description"
+      content="Instalacao, manutencao e higienizacao de ar-condicionado split com atendimento residencial e comercial em Aguai e regiao. Solicite seu orcamento no WhatsApp."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="NTech Climatizacao" />
+    <link rel="canonical" href="https://www.ntechbrasil.com.br/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="NTech Climatizacao" />
+    <meta property="og:title" content="NTech Climatizacao | Ar-Condicionado Residencial e Comercial" />
+    <meta
+      property="og:description"
+      content="Instalacao, manutencao e higienizacao de ar-condicionado split em Aguai e regiao. Atendimento rapido via WhatsApp."
+    />
+    <meta property="og:url" content="https://www.ntechbrasil.com.br/" />
+    <meta property="og:image" content="https://www.ntechbrasil.com.br/assets/images/hero.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NTech Climatizacao | Ar-Condicionado Residencial e Comercial" />
+    <meta
+      name="twitter:description"
+      content="Instalacao, manutencao e higienizacao de ar-condicionado split em Aguai e regiao."
+    />
+    <meta name="twitter:image" content="https://www.ntechbrasil.com.br/assets/images/hero.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "NTech Climatizacao",
+        "image": "https://www.ntechbrasil.com.br/assets/images/hero.jpg",
+        "url": "https://www.ntechbrasil.com.br/",
+        "telephone": "+55 19 97119-5905",
+        "priceRange": "$$",
+        "areaServed": ["Aguai", "Sao Joao da Boa Vista", "Regiao"],
+        "serviceType": [
+          "Instalacao de ar-condicionado split",
+          "Manutencao preventiva e corretiva",
+          "Higienizacao de ar-condicionado"
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "07:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ],
+        "sameAs": ["https://www.instagram.com"]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Qual a frequencia ideal de higienizacao do ar-condicionado split?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Em uso residencial comum, a recomendacao tecnica e a cada 6 meses. Em ambientes comerciais com uso intenso, o intervalo pode ser menor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Vocês fazem instalacao com vacuo da linha?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Seguimos processo tecnico com vacuo da linha e testes de funcionamento para preservar desempenho e vida util do equipamento."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Atendem empresas com rotina de manutencao?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Atendemos empresas com plano periodico de manutencao e higienizacao para reduzir paradas e manter o sistema eficiente."
+            }
+          }
+        ]
+      }
+    </script>
     <link rel="icon" href="assets/logo.png" />
     <link
       rel="stylesheet"
@@ -16,43 +107,38 @@
 
     <nav class="navbar">
       <div class="nav-wrapper">
-        <a href="index.html" class="imglogo"><img src="assets/logo.png" /></a>
+        <a href="index.html" class="imglogo"><img src="assets/logo.png" alt="NTech" /></a>
 
         <div class="menu" id="mainMenu">
-          <a href="../index.html" data-i18n="nav_home">Início</a>
-          <a href="#about" data-i18n="nav_about">Sobre</a>
-          <a href="pages/assistencia.html" data-i18n="nav_hardware"
-            >Manutenção</a
-          >
-          <a href="pages/desenvolvimento.html" data-i18n="nav_software"
-            >Desenvolvimento</a
-          >
+          <a href="#hero">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="pages/instalacao.html">Instalação</a>
+          <a href="pages/manutencao.html">Manutenção</a>
+          <a href="pages/higienizacao.html">Higienização</a>
+          <a href="pages/pmoc.html">PMOC</a>
+          <a href="pages/dicas.html">Dicas</a>
+          <a href="#processo">Processo</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#contato">Contato</a>
         </div>
+
         <div class="actions">
           <a
             href="https://wa.me/5519971195905"
             class="btn btn-primary"
             style="padding: 8px 16px"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <i class="fab fa-whatsapp"></i>
-            <span data-i18n="nav_contact">Falar Agora</span>
+            <span>Falar Agora</span>
           </a>
-
-          <button
-            class="btn-icon"
-            id="lang-toggle"
-            aria-label="Alterar Idioma"
-            style="font-weight: bold; font-size: 14px"
-          >
-            <i class="fas fa-globe" style="margin-right: 5px"></i>
-            <span>EN</span>
-          </button>
 
           <button class="btn-icon" id="theme-toggle" aria-label="Alternar Tema">
             <i class="fas fa-sun"></i>
           </button>
 
-          <button class="hamburger" id="menuToggle">
+          <button class="hamburger" id="menuToggle" aria-label="Abrir menu">
             <span></span><span></span><span></span>
           </button>
         </div>
@@ -60,228 +146,348 @@
     </nav>
 
     <main class="page">
-      <section class="index-hero" id="hero">        
+      <section class="index-hero" id="hero">
         <div class="hero-light"></div>
         <div class="container">
-          <div class="hero-grid">
+          <div class="hero-grid" style="align-items: center; gap: 32px">
             <div class="hero-content" data-reveal>
               <div class="hero-tag">
-                <i class="fas fa-laptop-medical"></i>
-                <span data-i18n="hero_tag">Tecnologia & Inovação</span>
+                <i class="fas fa-snowflake"></i>
+                <span>Especialista em Climatização</span>
               </div>
 
-              <h1 class="hero-title" data-i18n="hero_title">
-                Do <span class="text-hardware">Reparo</span> ao
-                <span class="text-software">Código</span>
+              <h1 class="hero-title">
+                Instalação, Manutenção e Higienização de
+                <span class="text-software">Ar-Condicionado</span>
               </h1>
 
-              <p class="hero-description" data-i18n="hero_desc">
-                A ponte entre o mundo físico e o digital. Especialista em
-                manutenção de alto nível e desenvolvimento de sistemas
-                complexos.
+              <p class="hero-description">
+                Atendimento residencial e comercial com foco em eficiência,
+                conforto térmico e economia de energia. Diagnóstico técnico,
+                manutenção preventiva e corretiva com padrão profissional.
               </p>
 
               <div class="decision-wrapper">
-                <a
-                  href="pages/assistencia.html"
-                  class="decision-card choice-btn"
-                >
-                  <div class="card-icon-box"><i class="fas fa-tools"></i></div>
+                <a href="#servicos" class="decision-card choice-btn">
+                  <div class="card-icon-box"><i class="fas fa-wrench"></i></div>
                   <div class="card-info">
-                    <h3 data-i18n="card_hard_title">Assistência Técnica</h3>
-                    <p data-i18n="card_hard_desc">PC, Notebook e Redes</p>
+                    <h3>Ver Serviços</h3>
+                    <p>Instalação, limpeza e reparo</p>
                   </div>
                   <i class="fas fa-arrow-right card-arrow"></i>
                 </a>
 
                 <a
-                  href="pages/desenvolvimento.html"
+                  href="https://wa.me/5519971195905"
                   class="decision-card choice-btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <div class="card-icon-box"><i class="fas fa-code"></i></div>
+                  <div class="card-icon-box"><i class="fab fa-whatsapp"></i></div>
                   <div class="card-info">
-                    <h3 data-i18n="card_soft_title">Desenvolvimento</h3>
-                    <p data-i18n="card_soft_desc">Sites, Apps e Sistemas</p>
+                    <h3>Orçamento Rápido</h3>
+                    <p>Mesmo número do site principal</p>
                   </div>
                   <i class="fas fa-arrow-right card-arrow"></i>
                 </a>
               </div>
             </div>
 
-            <div class="hero-carousel-col">
-              <div class="carousel-track">
-                <div class="tech-card">
-                  <i class="fab fa-java" style="color: #007396"></i>
-                  <span>Java Spring</span>
+            <div class="card" data-reveal>
+              <img
+                src="assets/images/hero.jpg"
+                alt="Imagem principal de ar-condicionado"
+                style="width: 100%; border-radius: 12px; margin-bottom: 14px"
+              />
+              <p style="margin: 0; font-size: 0.92rem; color: var(--text-muted)">Atendimento com foco em resultado tecnico e agilidade.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicos" class="about-section">
+        <div class="container">
+          <div class="about-grid" style="gap: 24px">
+            <div class="about-text" data-reveal>
+              <div class="hero-tag" style="margin-bottom: 15px">Serviços Técnicos</div>
+              <h2>Soluções completas para ar-condicionado split e inverter</h2>
+              <p>
+                Atendemos com padrão técnico desde a instalação até a manutenção
+                periódica. O objetivo é garantir operação estável, ar limpo e
+                redução de custos com energia e futuras quebras.
+              </p>
+            </div>
+
+            <div class="stats-container" data-reveal>
+              <div class="stat-card card">
+                <span class="stat-number"><i class="fas fa-tools"></i></span>
+                <span class="stat-label">Instalação de Equipamentos</span>
+              </div>
+
+              <div class="stat-card card">
+                <span class="stat-number"><i class="fas fa-spray-can-sparkles"></i></span>
+                <span class="stat-label">Limpeza e Higienização</span>
+              </div>
+
+              <div class="stat-card card">
+                <span class="stat-number"><i class="fas fa-gauge-high"></i></span>
+                <span class="stat-label">Carga de Gás e Performance</span>
+              </div>
+
+              <div class="stat-card card">
+                <span class="stat-number"><i class="fas fa-screwdriver-wrench"></i></span>
+                <span class="stat-label">Manutenção Preventiva e Corretiva</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-2" style="margin-top: 24px">
+            <article class="card" data-reveal>
+              <img
+                src="assets/images/services/upgrade_hardware.jpg"
+                alt="Instalacao de ar-condicionado split"
+                style="width: 100%; border-radius: 10px; margin-bottom: 12px"
+              />
+              <h3 style="margin-bottom: 10px">Instalação Profissional</h3>
+              <p>Planejamento de ponto, tubulação e dreno com acabamento técnico.</p>
+              <a href="pages/instalacao.html" class="btn btn-outline" style="margin-top: 14px">Ver detalhes</a>
+            </article>
+
+            <article class="card" data-reveal>
+              <img
+                src="assets/images/services/limpeza.jpg"
+                alt="Limpeza de evaporadora"
+                style="width: 100%; border-radius: 10px; margin-bottom: 12px"
+              />
+              <h3 style="margin-bottom: 10px">Higienização Completa</h3>
+              <p>Remoção de sujeira, fungos e odores para melhorar a qualidade do ar.</p>
+              <a href="pages/higienizacao.html" class="btn btn-outline" style="margin-top: 14px">Ver detalhes</a>
+            </article>
+
+            <article class="card" data-reveal>
+              <img
+                src="assets/images/services/consultoria.jpg"
+                alt="Manutencao de condensadora"
+                style="width: 100%; border-radius: 10px; margin-bottom: 12px"
+              />
+              <h3 style="margin-bottom: 10px">Manutenção Técnica</h3>
+              <p>Correção de falhas elétricas, vazamentos e perda de rendimento.</p>
+              <a href="pages/manutencao.html" class="btn btn-outline" style="margin-top: 14px">Ver detalhes</a>
+            </article>
+
+            <article class="card" data-reveal>
+              <img
+                src="assets/images/services/redes.jpg"
+                alt="Plano de manutencao PMOC"
+                style="width: 100%; border-radius: 10px; margin-bottom: 12px"
+              />
+              <h3 style="margin-bottom: 10px">PMOC e Rotinas Preventivas</h3>
+              <p>Controle periódico para empresas e ambientes de uso contínuo.</p>
+              <a href="pages/pmoc.html" class="btn btn-outline" style="margin-top: 14px">Ver detalhes</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="processo" style="padding: 70px 0">
+        <div class="container">
+          <div class="hero-tag" style="margin-bottom: 15px">Como Trabalhamos</div>
+          <h2 style="margin-bottom: 20px">Processo técnico em 4 etapas</h2>
+
+          <div class="grid-2">
+            <div class="card" data-reveal>
+              <h3>1. Diagnóstico inicial</h3>
+              <p>Avaliamos capacidade, ambiente e estrutura para a melhor solução.</p>
+            </div>
+            <div class="card" data-reveal>
+              <h3>2. Execução do serviço</h3>
+              <p>Instalação ou manutenção com materiais adequados e boas práticas.</p>
+            </div>
+            <div class="card" data-reveal>
+              <h3>3. Testes e validação</h3>
+              <p>Conferimos vazão, consumo, pressão e desempenho térmico.</p>
+            </div>
+            <div class="card" data-reveal>
+              <h3>4. Entrega e orientações</h3>
+              <p>Você recebe instruções de uso e manutenção para maior durabilidade.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="depoimentos" style="padding: 70px 0; background: var(--bg-solid)">
+        <div class="container">
+          <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 30px">
+            <div>
+              <div class="hero-tag" style="margin-bottom: 12px">Prova Social</div>
+              <h2>O que nossos clientes dizem</h2>
+              <p style="color: var(--text-secondary)">
+                Atendimento com foco em qualidade tecnica, pontualidade e transparencia.
+              </p>
+            </div>
+            <a href="pages/assistencia.html#depoimentos" class="btn btn-outline">Ver mais avaliacoes</a>
+          </div>
+
+          <div class="testimonials-carousel">
+            <div class="card testimonial-card">
+              <p style="font-style: italic; color: var(--text-secondary)">
+                "Minha sala esfriou muito mais depois da higienizacao completa. Atendimento rapido e caprichoso."
+              </p>
+              <div>
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <div class="tech-card">
-                  <i class="fab fa-react" style="color: #61dafb"></i>
-                  <span>React Native</span>
+                <div class="author">Patricia M.</div>
+              </div>
+            </div>
+
+            <div class="card testimonial-card">
+              <p style="font-style: italic; color: var(--text-secondary)">
+                "Instalacao limpa e organizada, explicou cada etapa e deixou tudo funcionando perfeitamente."
+              </p>
+              <div>
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <div class="tech-card">
-                  <i class="fab fa-js" style="color: #f7df1e"></i>
-                  <span>Javascript</span>
+                <div class="author">Rafael C.</div>
+              </div>
+            </div>
+
+            <div class="card testimonial-card">
+              <p style="font-style: italic; color: var(--text-secondary)">
+                "Fechamos manutencao para o escritorio e tivemos queda nas paradas. Excelente custo-beneficio."
+              </p>
+              <div>
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <div class="tech-card">
-                  <i class="fab fa-node" style="color: #339933"></i>
-                  <span>Node.js</span>
+                <div class="author">Juliana S.</div>
+              </div>
+            </div>
+
+            <div class="card testimonial-card">
+              <p style="font-style: italic; color: var(--text-secondary)">
+                "Chamamos para corretiva urgente e resolveram no mesmo dia. Atendimento muito profissional."
+              </p>
+              <div>
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <div class="tech-card">
-                  <i class="fas fa-database" style="color: #f29111"></i>
-                  <span>Oracle SQL</span>
-                </div>
-                <div class="tech-card">
-                  <i class="fab fa-docker" style="color: #2496ed"></i>
-                  <span>Docker</span>
-                </div>
-                <div class="tech-card">
-                  <i class="fab fa-python" style="color: #3776ab"></i>
-                  <span>Python AI</span>
-                </div>
-                <div class="tech-card">
-                  <i class="fab fa-aws" style="color: #ff9900"></i>
-                  <span>AWS Cloud</span>
-                </div>
-                <div class="tech-card">
-                  <i class="fab fa-angular" style="color: #dd0031"></i>
-                  <span>Angular</span>
-                </div>
-                <div class="tech-card">
-                  <i class="fas fa-shield-alt" style="color: #ef4444"></i>
-                  <span>Security</span>
-                </div>
-                <div class="tech-card">
-                  <i class="fab fa-java" style="color: #007396"></i>
-                  <span>Java Spring</span>
-                </div>
-                <div class="tech-card">
-                  <i class="fab fa-react" style="color: #61dafb"></i>
-                  <span>React Native</span>
-                </div>
-                <div class="tech-card">
-                  <i class="fab fa-js" style="color: #f7df1e"></i>
-                  <span>Javascript</span>
-                </div>
-                <div class="tech-card">
-                  <i class="fab fa-node" style="color: #339933"></i>
-                  <span>Node.js</span>
-                </div>
-                <div class="tech-card">
-                  <i class="fas fa-database" style="color: #f29111"></i>
-                  <span>Oracle SQL</span>
-                </div>
-                <div class="tech-card">
-                  <i class="fab fa-docker" style="color: #2496ed"></i>
-                  <span>Docker</span>
-                </div>
-                <div class="tech-card">
-                  <i class="fab fa-python" style="color: #3776ab"></i>
-                  <span>Python AI</span>
-                </div>
-                <div class="tech-card">
-                  <i class="fab fa-aws" style="color: #ff9900"></i>
-                  <span>AWS Cloud</span>
-                </div>
-                <div class="tech-card">
-                  <i class="fab fa-angular" style="color: #dd0031"></i>
-                  <span>Angular</span>
-                </div>
-                <div class="tech-card">
-                  <i class="fas fa-shield-alt" style="color: #ef4444"></i>
-                  <span>Security</span>
-                </div>
+                <div class="author">Diego F.</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="about" class="about-section">
+      <section id="area-atendida" style="padding: 70px 0">
         <div class="container">
-          <div class="about-grid">
-            <div class="about-text" data-reveal>
-              <div
-                class="hero-tag"
-                style="margin-bottom: 15px"
-                data-i18n="about_tag"
-              >
-                Engenharia Computacional
-              </div>
-              <!-- data-i18n="about_title" adicionado aqui -->
-              <h2 data-i18n="about_title">
-                A Diferença entre consertar <br />e Solucionar.
-              </h2>
+          <div class="hero-tag" style="margin-bottom: 12px">Cobertura</div>
+          <h2 style="margin-bottom: 12px">Area de atendimento</h2>
+          <p style="color: var(--text-secondary); max-width: 760px; margin-bottom: 24px">
+            Atendimento para residencias, escritorios e comercios em Aguai e regiao. Consulte disponibilidade para cidades proximas.
+          </p>
 
-              <p data-i18n="about_p1">
-                Muitos olham para o computador e veem apenas peças. Outros olham
-                para o código e veem apenas linhas.
-                <strong>Na nTech, nós vemos o sistema completo.</strong>
-              </p>
-              <p data-i18n="about_p2">
-                Como Engenheiro de Computação, unifico o conhecimento profundo
-                de hardware com a lógica avançada de software. Isso significa
-                diagnósticos precisos que economizam seu dinheiro e sistemas
-                robustos que impulsionam seu negócio.
-              </p>
-
-              <div class="highlight-box">
-                <p
-                  style="margin: 0; font-style: italic; color: var(--text)"
-                  data-i18n="about_quote"
-                >
-                  "Não entregamos apenas o serviço, entregamos a tranquilidade
-                  de saber que foi feito por um especialista."
-                </p>
-              </div>
+          <div class="grid-2">
+            <div class="card" data-reveal>
+              <h3 style="margin-bottom: 12px">Cidades com atendimento frequente</h3>
+              <p style="margin-bottom: 8px">Aguai</p>
+              <p style="margin-bottom: 8px">Sao Joao da Boa Vista</p>
+              <p style="margin-bottom: 8px">Mogi Guacu</p>
+              <p style="margin-bottom: 8px">Mogi Mirim</p>
+              <p style="margin-bottom: 8px">Espirito Santo do Pinhal</p>
             </div>
-
-            <div class="stats-container" data-reveal>
-              <div class="stat-card card">
-                <span class="stat-number">+15</span>
-                <span class="stat-label" data-i18n="stat_exp_label"
-                  >Anos de Experiência</span
-                >
-              </div>
-
-              <div class="stat-card card">
-                <span class="stat-number">100%</span>
-                <span class="stat-label" data-i18n="stat_commit_label"
-                  >Comprometimento</span
-                >
-              </div>
-
-              <div class="stat-card card">
-                <span class="stat-number" style="font-size: 2.5rem">
-                  <i class="fas fa-user-graduate"></i>
-                </span>
-                <span
-                  class="stat-label"
-                  style="display: block; margin-top: 10px"
-                  data-i18n="stat_qualif_label"
-                >
-                  Profissional Altamente Qualificado
-                </span>
-                <span
-                  style="
-                    font-size: 0.8rem;
-                    color: var(--text-secondary);
-                    display: block;
-                  "
-                  data-i18n="stat_qualif_subtitle"
-                >
-                  Técnico e Engenheiro da computação
-                </span>
-              </div>
-
-              <div class="stat-card card">
-                <span class="stat-number">
-                  <i class="fas fa-check-circle"></i>
-                </span>
-                <span class="stat-label" data-i18n="stat_guarantee_label"
-                  >Garantia Total</span
-                >
-              </div>
+            <div class="card" data-reveal>
+              <h3 style="margin-bottom: 12px">Atendimento comercial e empresarial</h3>
+              <p style="margin-bottom: 8px">Lojas e escritorios</p>
+              <p style="margin-bottom: 8px">Clinicas e consultorios</p>
+              <p style="margin-bottom: 8px">Condominios</p>
+              <p style="margin-bottom: 8px">Pequenas industrias</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" style="padding: 0 0 70px 0">
+        <div class="container">
+          <div class="hero-tag" style="margin-bottom: 12px">FAQ</div>
+          <h2 style="margin-bottom: 20px">Perguntas frequentes</h2>
+
+          <div class="grid-2">
+            <article class="card" data-reveal>
+              <h3 style="margin-bottom: 10px">Qual a frequencia ideal de higienizacao?</h3>
+              <p>
+                Em geral, a cada 6 meses para uso residencial. Em uso intenso, recomendamos intervalo menor.
+              </p>
+            </article>
+
+            <article class="card" data-reveal>
+              <h3 style="margin-bottom: 10px">Vocês fazem instalacao com vacuo da linha?</h3>
+              <p>
+                Sim. A etapa de vacuo e essencial para desempenho e vida util do equipamento.
+              </p>
+            </article>
+
+            <article class="card" data-reveal>
+              <h3 style="margin-bottom: 10px">Atendem empresas com PMOC e rotina?</h3>
+              <p>
+                Sim. Estruturamos plano periodico para reduzir paradas e manter padrao de operacao.
+              </p>
+            </article>
+
+            <article class="card" data-reveal>
+              <h3 style="margin-bottom: 10px">Quanto tempo leva o atendimento?</h3>
+              <p>
+                Depende do tipo de servico e local, mas priorizamos retorno rapido via WhatsApp para agendamento.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="galeria" style="padding: 70px 0">
+        <div class="container">
+          <div class="hero-tag" style="margin-bottom: 15px">Galeria de Projetos</div>
+          <h2 style="margin-bottom: 20px">Locais reservados para suas imagens</h2>
+
+          <div class="grid-2">
+            <div class="card" data-reveal>
+              <img src="assets/images/tips/tips-hero.jpg" alt="Projeto residencial 01" style="width: 100%; border-radius: 10px; margin-bottom: 10px" />
+              <p style="margin: 0; color: var(--text-muted)">Residencial: instalacao e ajuste de desempenho</p>
+            </div>
+            <div class="card" data-reveal>
+              <img src="assets/images/tips/tip-overheat.png" alt="Projeto comercial 01" style="width: 100%; border-radius: 10px; margin-bottom: 10px" />
+              <p style="margin: 0; color: var(--text-muted)">Comercial: monitoramento e manutencao periodica</p>
+            </div>
+            <div class="card" data-reveal>
+              <img src="assets/images/tips/tip-preventive.png" alt="Limpeza de filtro" style="width: 100%; border-radius: 10px; margin-bottom: 10px" />
+              <p style="margin: 0; color: var(--text-muted)">Higienizacao interna e troca de filtros</p>
+            </div>
+            <div class="card" data-reveal>
+              <img src="assets/images/tips/tip-upgrade.png" alt="Instalacao de evaporadora" style="width: 100%; border-radius: 10px; margin-bottom: 10px" />
+              <p style="margin: 0; color: var(--text-muted)">Instalacao e validacao de funcionamento</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" style="padding: 70px 0 90px 0">
+        <div class="container">
+          <div class="card" data-reveal style="text-align: center">
+            <h2 style="margin-bottom: 10px">Solicite seu orçamento agora</h2>
+            <p style="max-width: 700px; margin: 0 auto 20px auto">
+              Atendimento rápido via WhatsApp para instalação, manutenção,
+              higienização e dúvidas técnicas sobre ar-condicionado.
+            </p>
+            <a
+              href="https://wa.me/5519971195905"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-whatsapp"></i>
+              Chamar no WhatsApp (19) 97119-5905
+            </a>
           </div>
         </div>
       </section>
@@ -294,28 +500,16 @@
         "
       >
         <div class="container" style="text-align: center">
-          <!-- O logo geralmente não é traduzido, mas o slogan sim -->
-          <a href="#" class="logo" style="font-size: 24px"
-            >nTech<span>Brasil</span></a
-          >
+          <a href="#" class="logo" style="font-size: 24px">nTech<span>Climatização</span></a>
 
-          <p
-            style="color: var(--text-secondary); margin-top: 10px"
-            data-i18n="footer_slogan"
-          >
-            Onde a tecnologia encontra a excelência em serviço. Seu parceiro
-            confiável em hardware e software.
+          <p style="color: var(--text-secondary); margin-top: 10px">
+            Soluções em ar-condicionado para conforto, saúde e desempenho.
           </p>
 
-          <p
-            style="color: var(--text-muted); margin-top: 15px"
-            data-i18n="footer_copyright"
-          >
-            &copy; 2025 Nelson Pereira de Souza Junior. Todos os direitos
-            reservados.
+          <p style="color: var(--text-muted); margin-top: 15px">
+            &copy; 2026 Nelson Pereira de Souza Junior. Todos os direitos reservados.
           </p>
 
-          <!-- Os ícones sociais (Instagram, LinkedIn, GitHub) são universais e não requerem tradução -->
           <div
             style="
               margin-top: 20px;
@@ -324,15 +518,9 @@
               justify-content: center;
             "
           >
-            <a href="#" style="color: var(--text-secondary); font-size: 20px"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="#" style="color: var(--text-secondary); font-size: 20px"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a href="#" style="color: var(--text-secondary); font-size: 20px"
-              ><i class="fab fa-github"></i
-            ></a>
+            <a href="https://wa.me/5519971195905" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); font-size: 20px"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); font-size: 20px"><i class="fab fa-instagram"></i></a>
+            <a href="pages/dicas.html" style="color: var(--text-secondary); font-size: 20px"><i class="fas fa-book-open"></i></a>
           </div>
         </div>
       </footer>

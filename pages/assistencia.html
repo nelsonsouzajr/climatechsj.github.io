@@ -3,57 +3,49 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>NTech — Assistência Técnica Especializada</title>
+    <title>NTech Climatizacao - Manutencao e Higienizacao</title>
     <meta
       name="description"
-      content="Manutenção de computadores, notebooks e redes em Aguaí e região. Engenharia de Computação."
+      content="Manutencao preventiva e corretiva de ar-condicionado split em Aguai e regiao. Higienizacao completa, carga de gas e atendimento rapido via WhatsApp."
     />
     <link rel="icon" href="../assets/logo.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="nav-wrapper">
-        <a href="index.html" class="logo">nTech<span>Brasil</span></a>
+        <a href="../index.html" class="imglogo"
+          ><img src="../assets/logo.png" alt="NTech Climatizacao"
+        /></a>
 
         <div class="menu" id="mainMenu">
-          <a href="../index.html" data-i18n="nav_home">Início</a>
-          <a href="#servicos">Serviços</a>
+          <a href="../index.html">Inicio</a>
+          <a href="#servicos">Servicos</a>
           <a href="#depoimentos">Depoimentos</a>
           <a href="#contato">Contato</a>
-          
-          
         </div>
+
         <div class="actions">
           <a
-            href="https://wa.me/5519971195905"
+            href="https://wa.me/5519971195905?text=Ola%2C%20quero%20um%20orcamento%20para%20manutencao%20ou%20higienizacao%20de%20ar-condicionado."
             class="btn btn-primary"
             style="padding: 8px 16px"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <i class="fab fa-whatsapp"></i>
-            <span data-i18n="nav_contact">Falar com Técnico</span>
+            <span>Falar no WhatsApp</span>
           </a>
-
-          <button
-            class="btn-icon"
-            id="lang-toggle"
-            aria-label="Alterar Idioma"
-            style="font-weight: bold; font-size: 14px"
-          >
-            <i class="fas fa-globe" style="margin-right: 5px"></i>
-            <span>EN</span>
-          </button>
 
           <button class="btn-icon" id="theme-toggle" aria-label="Alternar Tema">
             <i class="fas fa-sun"></i>
           </button>
 
-          <button class="hamburger" id="menuToggle">
+          <button class="hamburger" id="menuToggle" aria-label="Abrir menu">
             <span></span><span></span><span></span>
           </button>
         </div>
@@ -66,192 +58,82 @@
         <div class="container">
           <div class="hero-grid">
             <div class="hero-content" data-reveal>
-              <span class="hero-tag"
-                ><i class="fas fa-wrench"></i> Manutenção Especializada</span
-              >
+              <span class="hero-tag"><i class="fas fa-fan"></i> Atendimento Tecnico</span>
               <h1 class="hero-title">
-                Seu equipamento, <br /><span>Como Novo.</span>
+                Manutencao e Higienizacao de <span class="text-hardware">Ar-Condicionado</span>
               </h1>
               <p class="hero-description">
-                Manutenção, upgrade e suporte técnico com a confiança de um
-                Engenheiro. Atendemos notebooks, PCs Gamers e infraestrutura de
-                rede.
+                Evite queda de rendimento, mau cheiro e aumento da conta de energia.
+                Fazemos limpeza completa da evaporadora e condensadora, revisao de componentes
+                e testes de performance.
               </p>
               <div style="display: flex; gap: 15px; flex-wrap: wrap">
-                <a href="https://wa.me/5519971195905" class="btn btn-primary">
-                  <i class="fab fa-whatsapp"></i> Orçamento Grátis
+                <a
+                  href="https://wa.me/5519971195905?text=Ola%2C%20quero%20agendar%20manutencao%20de%20ar-condicionado."
+                  class="btn btn-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-whatsapp"></i> Agendar Atendimento
                 </a>
-                <a href="#servicos" class="btn btn-outline">Ver Serviços</a>
+                <a href="#servicos" class="btn btn-outline">Ver Servicos</a>
               </div>
             </div>
 
-            <div
-              style="
-                display: flex;
-                justify-content: center;
-                align-items: center;
-              "
-            >
-              <i
-                class="fas fa-desktop"
-                style="font-size: 15rem; color: var(--border); opacity: 0.5"
-              ></i>
+            <div class="card" data-reveal>
+              <img
+                src="../assets/images/services/limpeza.jpg"
+                alt="Higienizacao de ar-condicionado split"
+                style="width: 100%; border-radius: 10px; margin-bottom: 12px"
+              />
+              <p style="margin: 0; color: var(--text-secondary)">
+                Equipe especializada para residencias, escritorios e pequenos comercios.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section
-        id="servicos"
-        style="padding: 80px 0; background: var(--bg-solid)"
-      >
+      <section id="servicos" style="padding: 80px 0; background: var(--bg-solid)">
         <div class="container">
-          <div
-            style="text-align: center; max-width: 700px; margin: 0 auto"
-            data-reveal
-          >
-            <h2>O que consertamos?</h2>
+          <div style="text-align: center; max-width: 700px; margin: 0 auto" data-reveal>
+            <h2>Servicos mais solicitados</h2>
             <p style="color: var(--text-secondary)">
-              Diagnóstico preciso e transparência total.
+              Solucoes para melhorar desempenho, qualidade do ar e vida util do equipamento.
             </p>
           </div>
 
           <div class="service-grid-page">
             <div class="card service-card" data-reveal>
-              <div
-                style="
-                  height: 100px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  background: rgba(0, 0, 0, 0.1);
-                  border-radius: 8px;
-                  margin-bottom: 15px;
-                "
-              >
-                <i
-                  class="fas fa-compact-disc"
-                  style="font-size: 40px; color: var(--primary)"
-                ></i>
-              </div>
-              <h3>Formatação & Otimização</h3>
+              <img src="../assets/images/services/limpeza.jpg" alt="Limpeza tecnica de split" />
+              <h3>Higienizacao Tecnica</h3>
               <p>
-                Instalação de Windows/Linux, drivers originais e backup de
-                arquivos.
+                Limpeza completa de evaporadora e condensadora para remover fungos, poeira e odores.
               </p>
             </div>
 
             <div class="card service-card" data-reveal>
-              <div
-                style="
-                  height: 100px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  background: rgba(0, 0, 0, 0.1);
-                  border-radius: 8px;
-                  margin-bottom: 15px;
-                "
-              >
-                <i
-                  class="fas fa-memory"
-                  style="font-size: 40px; color: var(--primary)"
-                ></i>
-              </div>
-              <h3>Upgrade (SSD/RAM)</h3>
+              <img src="../assets/images/services/upgrade.jpg" alt="Revisao tecnica e performance" />
+              <h3>Manutencao Preventiva</h3>
               <p>
-                Deixe seu computador até 10x mais rápido trocando o HD por SSD.
+                Revisao periodica para evitar falhas, reduzir consumo de energia e manter conforto termico.
               </p>
             </div>
 
             <div class="card service-card" data-reveal>
-              <div
-                style="
-                  height: 100px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  background: rgba(0, 0, 0, 0.1);
-                  border-radius: 8px;
-                  margin-bottom: 15px;
-                "
-              >
-                <i
-                  class="fas fa-broom"
-                  style="font-size: 40px; color: var(--primary)"
-                ></i>
-              </div>
-              <h3>Limpeza Preventiva</h3>
+              <img src="../assets/images/services/consultoria.jpg" alt="Diagnostico e orientacao tecnica" />
+              <h3>Diagnostico e Corretiva</h3>
               <p>
-                Troca de pasta térmica (prata) e limpeza interna para evitar
-                superaquecimento.
+                Identificacao de vazamentos, ruido, congelamento e perda de rendimento com solucao tecnica.
               </p>
             </div>
 
             <div class="card service-card" data-reveal>
-              <div
-                style="
-                  height: 100px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  background: rgba(0, 0, 0, 0.1);
-                  border-radius: 8px;
-                  margin-bottom: 15px;
-                "
-              >
-                <i
-                  class="fas fa-laptop"
-                  style="font-size: 40px; color: var(--primary)"
-                ></i>
-              </div>
-              <h3>Reparo de Notebooks</h3>
-              <p>Troca de tela, teclado, bateria e reparo de carcaça.</p>
-            </div>
-
-            <div class="card service-card" data-reveal>
-              <div
-                style="
-                  height: 100px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  background: rgba(0, 0, 0, 0.1);
-                  border-radius: 8px;
-                  margin-bottom: 15px;
-                "
-              >
-                <i
-                  class="fas fa-network-wired"
-                  style="font-size: 40px; color: var(--primary)"
-                ></i>
-              </div>
-              <h3>Redes Wi-Fi</h3>
+              <img src="../assets/images/services/redes.jpg" alt="Atendimento empresarial com rotinas periodicas" />
+              <h3>Rotina para Empresas</h3>
               <p>
-                Configuração de roteadores e cabeamento para internet rápida na
-                casa toda.
+                Plano de manutencao para ambientes comerciais com uso continuo e menor risco de parada.
               </p>
-            </div>
-
-            <div class="card service-card" data-reveal>
-              <div
-                style="
-                  height: 100px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  background: rgba(0, 0, 0, 0.1);
-                  border-radius: 8px;
-                  margin-bottom: 15px;
-                "
-              >
-                <i
-                  class="fas fa-mobile-alt"
-                  style="font-size: 40px; color: var(--primary)"
-                ></i>
-              </div>
-              <h3>Celulares & Tablets</h3>
-              <p>Troca de tela, bateria e recuperação de sistema.</p>
             </div>
           </div>
         </div>
@@ -260,17 +142,12 @@
       <section id="depoimentos" style="padding: 60px 0; background: var(--bg)">
         <div class="container">
           <div
-            style="
-              display: flex;
-              justify-content: space-between;
-              align-items: end;
-              margin-bottom: 30px;
-            "
+            style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 30px"
           >
             <div>
-              <h2>O que dizem nossos clientes</h2>
+              <h2>Clientes satisfeitos</h2>
               <p style="color: var(--text-secondary)">
-                Histórias reais de quem confia na nTech.
+                Feedback real de quem contratou nossos servicos.
               </p>
             </div>
             <button
@@ -278,83 +155,44 @@
               class="btn btn-outline"
               style="font-size: 0.9rem"
             >
-              <i class="fas fa-pen"></i> Avaliar
+              <i class="fas fa-pen"></i> Deixar avaliacao
             </button>
           </div>
 
           <div class="testimonials-carousel">
             <div class="card testimonial-card">
               <p style="font-style: italic; color: var(--text-secondary)">
-                "Atendimento excelente! Meu notebook estava travando muito,
-                fizeram a limpeza e instalação do SSD. Ficou novo!"
+                "Atendimento rapido e muito capricho na limpeza. O ar ficou mais forte e sem cheiro."
               </p>
               <div>
                 <div class="stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <div class="author">Ana Paula</div>
+                <div class="author">Luciana R.</div>
               </div>
             </div>
 
             <div class="card testimonial-card">
               <p style="font-style: italic; color: var(--text-secondary)">
-                "O Nelson explicou tudo o que seria feito. Transparência total e
-                preço justo. Recomendo de olhos fechados."
+                "Resolvido no mesmo dia. Explicou o problema e orientou a frequencia ideal da manutencao."
               </p>
               <div>
                 <div class="stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <div class="author">Marcos Oliveira</div>
+                <div class="author">Marcelo P.</div>
               </div>
             </div>
 
             <div class="card testimonial-card">
               <p style="font-style: italic; color: var(--text-secondary)">
-                "Contratei para configurar a rede do meu escritório. O sinal
-                agora chega em todo lugar com velocidade máxima."
+                "Fechamos manutencao mensal para o escritorio e reduziu bastante as ocorrencias."
               </p>
               <div>
                 <div class="stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <div class="author">Carlos Duarte</div>
-              </div>
-            </div>
-
-            <div class="card testimonial-card">
-              <p style="font-style: italic; color: var(--text-secondary)">
-                "Excelente profissional. Recuperou dados de um HD que eu achava
-                que tinha perdido para sempre."
-              </p>
-              <div>
-                <div class="stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="author">Renata Lima</div>
-              </div>
-            </div>
-
-            <div class="card testimonial-card">
-              <p style="font-style: italic; color: var(--text-secondary)">
-                "Serviço rápido e eficiente. Buscou e entregou o computador em
-                casa. Facilitou muito minha vida."
-              </p>
-              <div>
-                <div class="stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-                <div class="author">João Silva</div>
+                <div class="author">Sabrina M.</div>
               </div>
             </div>
           </div>
@@ -369,19 +207,15 @@
           >
             &times;
           </button>
-          <h3>Deixe seu Depoimento</h3>
+          <h3>Compartilhe sua experiencia</h3>
           <p style="margin-bottom: 20px; color: var(--text-secondary)">
-            Sua opinião é muito importante para nós!
+            Sua opiniao ajuda novos clientes a escolherem com seguranca.
           </p>
 
-          <form
-            data-formsubmit
-            action="https://formsubmit.co/ntechbrazil@gmail.com"
-            method="POST"
-          >
-            <input type="hidden" name="_subject" value="Nova Avaliação nTech" />
+          <form data-formsubmit action="https://formsubmit.co/ntechbrazil@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Nova Avaliacao - NTech Climatizacao" />
 
-            <input type="text" name="Nome" placeholder="Seu Nome" required />
+            <input type="text" name="Nome" placeholder="Seu nome" required />
             <input type="text" name="Cidade" placeholder="Cidade/UF" />
 
             <select name="Nota" style="margin-bottom: 15px">
@@ -392,134 +226,78 @@
 
             <textarea
               name="Mensagem"
-              placeholder="Escreva sua experiência..."
+              placeholder="Conte como foi seu atendimento"
               rows="3"
               required
             ></textarea>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%">
-              Enviar Avaliação
-            </button>
+            <button type="submit" class="btn btn-primary" style="width: 100%">Enviar avaliacao</button>
           </form>
         </div>
       </div>
 
-      <section
-        id="contato"
-        style="padding: 100px 0; background: var(--bg-solid)"
-      >
+      <section id="contato" style="padding: 100px 0; background: var(--bg-solid)">
         <div class="container">
           <div class="contact-split">
             <div class="contact-info" data-reveal>
-              <span class="hero-tag" style="margin-bottom: 15px"
-                >Fale Conosco</span
-              >
-              <h2>Pronto para resolver?</h2>
+              <span class="hero-tag" style="margin-bottom: 15px">Fale Conosco</span>
+              <h2>Solicite seu orcamento agora</h2>
               <p style="margin-bottom: 30px; font-size: 1.1rem">
-                Não deixe seu equipamento parado. Solicite um orçamento rápido e
-                transparente agora mesmo.
+                Informe modelo, quantidade de aparelhos e cidade. Retornamos com orientacao rapida.
               </p>
 
               <div class="contact-item">
                 <i class="fab fa-whatsapp"></i>
-                <span>+55(19) 97119-5905</span>
+                <span>+55 (19) 97119-5905</span>
               </div>
               <div class="contact-item">
                 <i class="far fa-envelope"></i>
-                <span>ntechbrazil@gmail.com.br</span>
+                <span>ntechbrazil@gmail.com</span>
               </div>
               <div class="contact-item">
                 <i class="far fa-clock"></i>
-                <span>Seg a Sex: 07h às 20h</span>
-              </div>
-              <div class="contact-item">
-                <i class="far fa-clock"></i>
-                <span>Sab: 09h às 18h</span>
+                <span>Seg a Sex: 07h as 20h | Sab: 09h as 18h</span>
               </div>
 
               <div
-                style="
-                  margin-top: 30px;
-                  padding: 20px;
-                  background: var(--bg);
-                  border-radius: 12px;
-                  border: 1px solid var(--border);
-                "
+                style="margin-top: 30px; padding: 20px; background: var(--bg); border-radius: 12px; border: 1px solid var(--border)"
               >
                 <p style="font-size: 0.9rem; margin: 0">
-                  <strong>Nota:</strong> Buscamos e entregamos seu equipamento.
+                  <strong>Dica:</strong> envie foto da evaporadora e da condensadora para agilizar o diagnostico.
                 </p>
               </div>
             </div>
 
             <div class="card" style="padding: 40px" data-reveal>
-              <h3 style="margin-bottom: 20px">Enviar Solicitação</h3>
-              <form
-                data-formsubmit
-                action="https://formsubmit.co/ntechbrazil@gmail.com"
-                method="POST"
-              >
-                <input
-                  type="hidden"
-                  name="_subject"
-                  value="Novo Orçamento Assistência"
-                />
+              <h3 style="margin-bottom: 20px">Enviar solicitacao</h3>
+              <form data-formsubmit action="https://formsubmit.co/ntechbrazil@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Novo Orcamento - Manutencao e Higienizacao" />
 
-                <label
-                  style="
-                    font-size: 0.9rem;
-                    font-weight: 600;
-                    margin-bottom: 5px;
-                    display: block;
-                  "
-                  >Seu Nome</label
-                >
-                <input
-                  type="text"
-                  name="nome"
-                  placeholder="Ex: João Silva"
-                  required
-                />
+                <label style="font-size: 0.9rem; font-weight: 600; margin-bottom: 5px; display: block">Seu nome</label>
+                <input type="text" name="nome" placeholder="Ex: Joao Silva" required />
 
-                <label
-                  style="
-                    font-size: 0.9rem;
-                    font-weight: 600;
-                    margin-bottom: 5px;
-                    display: block;
-                  "
-                  >WhatsApp</label
-                >
-                <input
-                  type="tel"
-                  id="telephone"
-                  name="telefone"
-                  placeholder="(DD) 99999-9999"
-                  required
-                />
+                <label style="font-size: 0.9rem; font-weight: 600; margin-bottom: 5px; display: block">WhatsApp</label>
+                <input type="tel" id="telephone" name="telefone" placeholder="(DD) 99999-9999" required />
 
-                <label
-                  style="
-                    font-size: 0.9rem;
-                    font-weight: 600;
-                    margin-bottom: 5px;
-                    display: block;
-                  "
-                  >O Problema</label
-                >
+                <label style="font-size: 0.9rem; font-weight: 600; margin-bottom: 5px; display: block">Servico desejado</label>
+                <select name="servico" required>
+                  <option value="">Selecione</option>
+                  <option value="Higienizacao">Higienizacao</option>
+                  <option value="Manutencao preventiva">Manutencao preventiva</option>
+                  <option value="Manutencao corretiva">Manutencao corretiva</option>
+                  <option value="Plano para empresa">Plano para empresa</option>
+                </select>
+
+                <label style="font-size: 0.9rem; font-weight: 600; margin-bottom: 5px; display: block">Mensagem</label>
                 <textarea
-                  name="problema"
-                  placeholder="Ex: Meu notebook não liga..."
+                  name="mensagem"
+                  placeholder="Ex: Tenho 2 splits de 12.000 BTUs e preciso de limpeza completa."
                   rows="4"
                   required
                 ></textarea>
 
-                <button
-                  type="submit"
-                  class="btn btn-primary"
-                  style="width: 100%; margin-top: 10px"
-                >
-                  Enviar e Falar no Zap
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px">
+                  Enviar e continuar no WhatsApp
                   <i class="fab fa-whatsapp" style="margin-left: 5px"></i>
                 </button>
               </form>
@@ -529,24 +307,14 @@
       </section>
     </main>
 
-    <footer
-      style="
-        background: #050510;
-        padding: 40px 0;
-        border-top: 1px solid var(--border);
-      "
-    >
+    <footer style="background: #050510; padding: 40px 0; border-top: 1px solid var(--border)">
       <div class="container" style="text-align: center">
-        <a href="#" class="logo" style="font-size: 24px"
-          >nTech<span>Brasil</span></a
-        >
+        <a href="../index.html" class="logo" style="font-size: 24px">nTech<span>Climatizacao</span></a>
         <p style="color: var(--text-secondary); margin-top: 10px">
-          Onde a tecnologia encontra a excelência em serviço. Seu parceiro
-          confiável em hardware e software.
+          Solucoes em ar-condicionado para conforto, saude e desempenho.
         </p>
         <p style="color: var(--text-muted); margin-top: 15px">
-          &copy; 2025 Nelson Pereira de Souza Junior. Todos os direitos
-          reservados.
+          &copy; 2026 Nelson Pereira de Souza Junior. Todos os direitos reservados.
         </p>
       </div>
     </footer>

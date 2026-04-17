@@ -5,6 +5,7 @@ import { initMobileMenu } from "./menu.js";
 import { initAnimations } from "./animations.js";
 import { initForms } from "./forms.js";
 import { initCarousel } from "./carousel.js";
+import { initMarketing } from "./marketing.js";
 
 // Aguarda o DOM estar pronto para evitar erros de "element not found"
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,4 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 6. Inicializa Carrossel (se houver na página)
   initCarousel();
+
+  // 7. Inicializa rastreio de marketing e origem de lead
+  initMarketing();
 });

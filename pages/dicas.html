@@ -1,165 +1,147 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dicas NTech — Manutenção de Computadores</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <script defer src="../js/main.js"></script>
-</head>
-<body>
-  <!-- Cabeçalho -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="../index.html">
-        <img src="../assets/logo.png" alt="NTech" class="logo">
-        <span class="brand-text">NTech</span>
-      </a>
-      <nav class="main-nav">
-        <a href="../index.html">Home</a>
-          <a href="../index.html#sobre">Sobre</a>
-          <a href="../index.html#servicos">Serviços</a>
-          <a href="../index.html#depoimentos">Depoimentos</a>
-          <a href="dicas.html">Dicas</a>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dicas NTech - Cuidados com Ar-Condicionado</title>
+    <meta
+      name="description"
+      content="Guia com dicas praticas para melhorar desempenho, economizar energia e aumentar a vida util do ar-condicionado split."
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script defer type="module" src="../js/main.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-wrapper">
+        <a href="../index.html" class="imglogo"
+          ><img src="../assets/logo.png" alt="NTech Climatizacao"
+        /></a>
+
+        <div class="menu" id="mainMenu">
+          <a href="../index.html">Inicio</a>
+          <a href="../index.html#servicos">Servicos</a>
+          <a href="#tips-list">Dicas</a>
           <a href="../index.html#contato">Contato</a>
-      </nav>
-      <div class="header-controls">
-          <!-- Theme toggle -->
-          <button
-            id="theme-toggle"
-            class="theme-toggle"
-            aria-label="Alternar tema"
-            aria-pressed="false"
-          >
-            <span class="icon sun" aria-hidden="true">☀️</span>
-            <span class="icon moon" aria-hidden="true">🌙</span>
-          </button>
-          <!-- WhatsApp CTA -->
-          <a
-            class="btn whatsapp"
-            href="https://wa.me/+5519971195905"
-            target="_blank"
-            rel="noopener"
-            >💬 WhatsApp</a
-          >
-          <!-- Mobile menu button -->
-        <button id="mobile-menu-btn" class="mobile-menu" aria-label="Abrir menu">
-          ☰
-        </button>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero -->
-    <section class="tips-hero">
-      <div class="container hero-inner">
-        <div class="hero-media">
-          <img src="../assets/images/wallpaper2.png" alt="Dicas de manutenção">
         </div>
-          <div class="hero-copy">
-            <h1>Aprenda a cuidar do seu PC e eletrônicos</h1>
-            <p>Descubra dicas práticas e rápidas para manter seus equipamentos sempre com alto desempenho.
-                Evite falhas, aumente a velocidade, reduza o consumo de energia e prolongue a vida útil dos seus dispositivos.
-                Pequenas ações de manutenção podem garantir grandes resultados no dia a dia da sua empresa ou em casa.</p>
-            <a class="btn primary" href="#tips-list">Ver dicas</a>
-          </div>
-    
+
+        <div class="actions">
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/5519971195905?text=Ola%2C%20quero%20um%20orcamento%20de%20ar-condicionado."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-whatsapp"></i>
+            WhatsApp
+          </a>
+
+          <button class="btn-icon" id="theme-toggle" aria-label="Alternar tema">
+            <i class="fas fa-sun"></i>
+          </button>
+
+          <button class="hamburger" id="menuToggle" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
-    </section>
+    </nav>
 
-      <!-- Lista de Dicas -->
-      <section class="tips-list" id="tips-list">
-        <div class="container cards">
-          <!-- Dica 1 -->
-          <article class="card">
-            <img src="../assets/images/tips/tip-speedup.jpg" alt="Otimização de computador">
-            <h3>Como deixar o PC mais rápido</h3>
+    <main class="page">
+      <section class="tips-hero" style="padding: 30px 0 20px 0">
+        <div class="container hero-inner" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px">
+          <div class="hero-media card" data-reveal>
+            <img src="../assets/images/tips/tips-hero.jpg" alt="Dicas para ar-condicionado" />
+          </div>
+          <div class="hero-copy" data-reveal>
+            <h1>Dicas praticas para manter seu ar-condicionado eficiente</h1>
             <p>
-              Um computador lento geralmente é resultado de inicializações automáticas em excesso, arquivos temporários e falta de manutenção do sistema.
-              Desinstale programas desnecessários, limpe a pasta temporária regularmente e utilize o "Gerenciador de Tarefas" para identificar processos pesados.
-              Também vale investir em um SSD — a diferença de desempenho é notável.
+              Com cuidados simples, voce reduz consumo de energia, melhora a qualidade do ar
+              e evita paradas inesperadas. Veja orientacoes que aplicamos no dia a dia tecnico.
             </p>
-          </article>
-
-          <!-- Dica 2 -->
-          <article class="card">
-            <img src="../assets/images/tips/tip-antivirus.png" alt="Antivírus para PC">
-            <h3>Como escolher um antivírus confiável</h3>
-            <p>
-              Um bom antivírus deve oferecer proteção em tempo real, atualizações automáticas e impacto mínimo no desempenho.
-              Opte por marcas reconhecidas, como Bitdefender, Kaspersky ou Windows Defender (que evoluiu muito nas últimas versões do Windows 10 e 11).
-              Evite usar dois antivírus simultaneamente — isso pode causar lentidão e conflitos.
-            </p>
-          </article>
-
-          <!-- Dica 3 -->
-          <article class="card">
-            <img src="../assets/images/tips/tip-overheat.png" alt="Notebook superaquecendo">
-            <h3>Sinais de superaquecimento do notebook</h3>
-            <p>
-              O calor excessivo pode danificar componentes internos. Fique atento a travamentos, ruídos altos das ventoinhas e quedas de desempenho.
-              Mantenha o notebook em superfícies planas, utilize bases com ventilação e faça limpezas internas periódicas com profissional qualificado.
-            </p>
-          </article>
-
-          <!-- Dica 4 -->
-          <article class="card">
-            <img src="../assets/images/tips/tip-preventive.png" alt="Manutenção preventiva de computador">
-            <h3>Manutenção preventiva: quando fazer</h3>
-            <p>
-              Assim como um carro, seu computador precisa de manutenção periódica.
-              A cada 6 meses, recomenda-se verificar cabos, pasta térmica, ventoinhas e estado físico dos componentes.
-              Essa rotina simples evita curtos e aumenta a durabilidade do equipamento.
-            </p>
-          </article>
-
-          <!-- Dica 5 -->
-          <article class="card">
-            <img src="../assets/images/tips/tip-upgrade.png" alt="Upgrade de SSD e memória RAM">
-            <h3>Upgrade de memória e SSD</h3>
-            <p>
-              Um dos upgrades com melhor custo-benefício é instalar um SSD e adicionar memória RAM.
-              A inicialização do sistema e a abertura de programas se tornam quase instantâneas.
-              Consulte um técnico de confiança para saber se o seu notebook é compatível e qual o tipo de SSD indicado (SATA, M.2 ou NVMe).
-            </p>
-          </article>
-
-          <!-- Dica 6 -->
-          <article class="card">
-            <img src="../assets/images/tips/tip-backup.png" alt="Backup de dados">
-            <h3>Importância do backup de dados</h3>
-            <p>
-              Perder dados importantes pode ser devastador. Realize backups regulares utilizando serviços na nuvem (Google Drive, OneDrive) ou dispositivos externos (HDs, pen drives).
-              Automatize o processo sempre que possível para garantir que seus arquivos estejam sempre protegidos contra falhas ou ataques de malware.
-            </p>
-          </article>
-
-          <!-- Dica 7 
-          <article class="card">
-            <img src="../assets/images/tips/tip-deactivate.png" alt="Desativar programas na inicialização do Windows">
-            <h3></h3>
-            <p>
-              Seu PC está parecendo uma tartaruga ao ligar? Muitos programas desnecessários podem estar iniciando junto com ele! Aprenda a desativar o que não precisa e deixe seu computador voando.
-            </p>
-          </article>
-        -->
+            <a class="btn btn-outline" href="#tips-list">Ver dicas</a>
+          </div>
+        </div>
       </section>
-  </main>
-  <!-- WhatsApp flutuante -->
-    <a
-      class="whatsapp-float"
-      href="https://wa.me/+5519971195905"
-      target="_blank"
-      aria-label="Fale conosco pelo WhatsApp"
-      >💬</a
-    >
 
-  <!-- Rodapé -->
-  <footer class="site-footer">
-    <div class="container">
-      <div>© <span id="year"></span> NTech — Todos os direitos reservados</div>
-      <div>Desenvolvido por Nelson Souza</div>
-    </div>
-  </footer>
-</body>
+      <section class="tips-list" id="tips-list" style="padding: 60px 0 90px 0">
+        <div class="container cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+          <article class="card" data-reveal>
+            <img src="../assets/images/tips/tip-speedup.jpg" alt="Limpeza de filtro" style="border-radius: 10px; margin-bottom: 10px" />
+            <h3>Limpeza de filtro periodica</h3>
+            <p>
+              Limpe os filtros a cada 30 dias em uso intenso. Filtro sujo reduz vazao de ar e eleva o consumo.
+            </p>
+          </article>
+
+          <article class="card" data-reveal>
+            <img src="../assets/images/tips/tip-antivirus.png" alt="Qualidade do ar interno" style="border-radius: 10px; margin-bottom: 10px" />
+            <h3>Atencao a odores e alergias</h3>
+            <p>
+              Mau cheiro e irritacao respiratoria sao sinais de higienizacao pendente. Nao espere agravar.
+            </p>
+          </article>
+
+          <article class="card" data-reveal>
+            <img src="../assets/images/tips/tip-overheat.png" alt="Condensadora superaquecendo" style="border-radius: 10px; margin-bottom: 10px" />
+            <h3>Evite bloqueio da condensadora</h3>
+            <p>
+              Garanta ventilacao ao redor da unidade externa. Obstrucao causa superaquecimento e perda de rendimento.
+            </p>
+          </article>
+
+          <article class="card" data-reveal>
+            <img src="../assets/images/tips/tip-preventive.png" alt="Manutencao preventiva" style="border-radius: 10px; margin-bottom: 10px" />
+            <h3>Faça manutencao preventiva</h3>
+            <p>
+              Revisoes periodicas aumentam a vida util do equipamento e reduzem o risco de corretivas caras.
+            </p>
+          </article>
+
+          <article class="card" data-reveal>
+            <img src="../assets/images/tips/tip-upgrade.png" alt="Ajuste de temperatura e economia" style="border-radius: 10px; margin-bottom: 10px" />
+            <h3>Use temperatura inteligente</h3>
+            <p>
+              Ajustes entre 23 e 24 graus normalmente entregam conforto com melhor eficiencia energetica.
+            </p>
+          </article>
+
+          <article class="card" data-reveal>
+            <img src="../assets/images/tips/tip-backup.png" alt="Drenagem e gotejamento" style="border-radius: 10px; margin-bottom: 10px" />
+            <h3>Observe sinais de drenagem</h3>
+            <p>
+              Gotejamento interno ou agua acumulada indicam necessidade de revisao em dreno e bandeja.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section style="padding-bottom: 70px">
+        <div class="container">
+          <div class="card" style="text-align: center" data-reveal>
+            <h2 style="margin-bottom: 10px">Precisa de ajuda tecnica?</h2>
+            <p style="max-width: 700px; margin: 0 auto 20px auto">
+              Envie modelo e problema no WhatsApp para receber orientacao e proposta rapida.
+            </p>
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/5519971195905?text=Ola%2C%20vi%20as%20dicas%20e%20quero%20agendar%20uma%20avaliacao%20tecnica."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-whatsapp"></i>
+              Falar com tecnico
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" style="padding: 30px 0; border-top: 1px solid var(--border)">
+      <div class="container" style="text-align: center">
+        <div>© <span id="year"></span> NTech Climatizacao - Todos os direitos reservados</div>
+        <div style="color: var(--text-muted); margin-top: 8px">Instalacao, manutencao e higienizacao de ar-condicionado split</div>
+      </div>
+    </footer>
+  </body>
 </html>

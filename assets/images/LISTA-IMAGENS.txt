@@ -1,0 +1,19 @@
+Lista de imagens sugeridas para o site de Ar-Condicionado
+
+Raiz de assets/images/
+- ar-condicionado-hero.jpg
+
+Pasta assets/images/services/
+- instalacao-split.jpg
+- limpeza-evaporadora.jpg
+- manutencao-condensadora.jpg
+- pmoc-ar-condicionado.jpg
+
+Pasta assets/images/tips/
+- projeto-residencial-01.jpg
+- projeto-comercial-01.jpg
+- limpeza-filtro-01.jpg
+- instalacao-evaporadora-01.jpg
+
+Observacao:
+- Mantenha exatamente esses nomes para que as imagens carreguem automaticamente no site.

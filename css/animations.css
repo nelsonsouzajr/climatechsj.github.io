@@ -1,3 +1,5 @@
+/* css/animations.css */
+
 /* Utilitários de Animação */
 .mouse-halo { 
   will-change: transform, opacity, left, top; 
