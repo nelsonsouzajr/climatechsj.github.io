@@ -7,6 +7,7 @@ import { initForms } from "./forms.js";
 import { initCarousel } from "./carousel.js";
 import { initMarketing } from "./marketing.js";
 import { initAbTesting } from "./ab-testing.js";
+import { renderTopbar } from "./nav.js";
 
 // Aguarda o DOM estar pronto para evitar erros de "element not found"
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 1. Inicializa o Tema (Dark/Light)
   initTheme();
+
+  // 1.1. Normaliza a topbar em todas as paginas
+  renderTopbar();
 
   // 2. Inicializa o Idioma
   initLanguage();
