@@ -11,7 +11,7 @@ import { renderTopbar } from "./nav.js";
 
 // Aguarda o DOM estar pronto para evitar erros de "element not found"
 document.addEventListener('DOMContentLoaded', () => {
-  console.log("%cNTech System: Inicializando...", "color:#6366f1; font-weight:bold;");
+  console.log("%cClimatEch System: Inicializando...", "color:#6366f1; font-weight:bold;");
 
   // 1. Normaliza a topbar em todas as paginas
   renderTopbar();

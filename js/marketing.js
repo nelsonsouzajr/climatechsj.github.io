@@ -2,9 +2,9 @@
 import { $$ } from "./utils.js";
 import { ANALYTICS_CONFIG } from "./analytics-config.js";
 
-const STORAGE_KEY = "ntech-attribution";
-const EVENT_STATS_KEY = "ntech-event-stats-v1";
-const SITE_ORIGIN_LABEL = "www.ntechclima.com.br";
+const STORAGE_KEY = "climatech-attribution";
+const EVENT_STATS_KEY = "climatech-event-stats-v1";
+const SITE_ORIGIN_LABEL = "www.climatechsj.com.br";
 const TRACK_PARAMS = [
   "utm_source",
   "utm_medium",
@@ -171,10 +171,10 @@ function initAnalyticsProviders() {
 function initGa4() {
   const measurementId = ANALYTICS_CONFIG.ga4MeasurementId;
   if (!measurementId) return;
-  if (document.getElementById("ntech-ga4-script")) return;
+  if (document.getElementById("climatech-ga4-script")) return;
 
   const script = document.createElement("script");
-  script.id = "ntech-ga4-script";
+  script.id = "climatech-ga4-script";
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
   document.head.appendChild(script);

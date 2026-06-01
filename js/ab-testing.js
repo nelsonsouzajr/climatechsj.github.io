@@ -1,7 +1,7 @@
 // ab-testing.js - Teste A/B simples para headlines por campanha/cidade
 import { getAttribution, trackCustomEvent } from "./marketing.js";
 
-const AB_STORAGE_PREFIX = "ntech-ab-variant";
+const AB_STORAGE_PREFIX = "climatech-ab-variant";
 
 export function initAbTesting() {
   const nodes = document.querySelectorAll("[data-ab-test]");

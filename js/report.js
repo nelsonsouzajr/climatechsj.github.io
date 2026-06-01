@@ -1,5 +1,5 @@
 // report.js - Relatorio local de performance por landing
-const EVENT_STATS_KEY = "ntech-event-stats-v1";
+const EVENT_STATS_KEY = "climatech-event-stats-v1";
 
 document.addEventListener("DOMContentLoaded", () => {
   renderReport();

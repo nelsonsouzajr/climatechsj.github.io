@@ -20,7 +20,7 @@ export function renderTopbar() {
 
   navbar.innerHTML = `
     <div class="nav-wrapper">
-      <a href="${rootPath}index.html" class="imglogo"><img src="${rootPath}assets/logo.png" alt="NTech Climatizacao" /></a>
+      <a href="${rootPath}index.html" class="imglogo"><img src="${rootPath}assets/logo.png" alt="ClimatEch Climatizacao" /></a>
 
       <div class="menu" id="mainMenu">
         ${NAV_ITEMS.map((item) => buildLink(item, rootPath, currentPath)).join("")}

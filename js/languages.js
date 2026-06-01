@@ -20,7 +20,7 @@ const translations = {
     // SEÇÃO SOBRE
     about_tag: "Engenharia Computacional",
     about_title: "A Diferença entre consertar <br />e Solucionar.",
-    about_p1: "Muitos olham para o computador e veem apenas peças. Outros olham para o código e veem apenas linhas. <strong>Na nTech, nós vemos o sistema completo.</strong>",
+    about_p1: "Muitos olham para o computador e veem apenas peças. Outros olham para o código e veem apenas linhas. <strong>Na ClimatEch, nós vemos o sistema completo.</strong>",
     about_p2: "Como Engenheiro de Computação, unifico o conhecimento profundo de hardware com a lógica avançada de software. Isso significa diagnósticos precisos que economizam seu dinheiro e sistemas robustos que impulsionam seu negócio.",
     about_quote: "\"Não entregamos apenas o serviço, entregamos a tranquilidade de saber que foi feito por um especialista.\"",
     // ESTATÍSTICAS (STATS)
@@ -53,7 +53,7 @@ const translations = {
     // ABOUT SECTION
     about_tag: "Computational Engineering",
     about_title: "The Difference Between Fixing <br />and Solving.",
-    about_p1: "Many look at the computer and see only parts. Others look at the code and see only lines. <strong>At nTech, we see the complete system.</strong>",
+    about_p1: "Many look at the computer and see only parts. Others look at the code and see only lines. <strong>At ClimatEch, we see the complete system.</strong>",
     about_p2: "As a Computer Engineer, I unify deep hardware knowledge with advanced software logic. This means precise diagnostics that save you money and robust systems that boost your business.",
     about_quote: "\"We don't just deliver the service, we deliver the peace of mind of knowing it was done by a specialist.\"",
     // STATS
@@ -74,16 +74,16 @@ export function initLanguage() {
   const html = document.documentElement;
 
   // Carrega idioma salvo ou padrão
-  const savedLang = localStorage.getItem("ntech-lang") || "pt";
+  const savedLang = localStorage.getItem("climatech-lang") || "pt";
   updateTexts(savedLang);
   updateIcon(btn, savedLang);
 
   if (btn) {
     btn.addEventListener("click", () => {
-      const current = localStorage.getItem("ntech-lang") || "pt";
+      const current = localStorage.getItem("climatech-lang") || "pt";
       const next = current === "pt" ? "en" : "pt";
       
-      localStorage.setItem("ntech-lang", next);
+      localStorage.setItem("climatech-lang", next);
       updateTexts(next);
       updateIcon(btn, next);
     });

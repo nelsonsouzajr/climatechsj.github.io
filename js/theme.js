@@ -22,7 +22,7 @@ export function initTheme() {
   }
 
   // 1. Carregar Estado Inicial
-  const saved = localStorage.getItem("ntech-theme") || "dark"; // Padrão Dark
+  const saved = localStorage.getItem("climatech-theme") || "dark"; // Padrão Dark
   html.setAttribute("data-theme", saved);
   updateIcon(saved);
 
@@ -33,7 +33,7 @@ export function initTheme() {
       const next = current === "dark" ? "light" : "dark";
 
       html.setAttribute("data-theme", next);
-      localStorage.setItem("ntech-theme", next);
+      localStorage.setItem("climatech-theme", next);
       updateIcon(next);
 
       // Animaçãozinha de rotação
