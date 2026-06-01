@@ -30,16 +30,20 @@
 
 .hero-grid {
   display: grid;
-  /* Coluna Esquerda (Flexível) | Coluna Direita (Fixa e Estreita) */
-  grid-template-columns: 1fr 220px; 
-  gap: 60px;
+  grid-template-columns: 1fr;
+  gap: 32px;
   width: 100%;
   align-items: center;
+  justify-items: center;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 /* --- LADO ESQUERDO: CONTEÚDO --- */
 .hero-content {
-  max-width: 800px; /* Limita largura do texto para leitura confortável */
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
 }
 
 .hero-tag {
@@ -78,15 +82,146 @@
   font-size: 1.05rem;
   color: var(--text-secondary);
   margin-bottom: 35px;
-  max-width: 550px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 1.6;
 }
 
+.testimonials-carousel {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding: 10px 4px 18px;
+  scroll-behavior: smooth;
+  cursor: grab;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+}
+
+.testimonials-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonials-carousel.dragging {
+  cursor: grabbing;
+}
+
+.index-hero .testimonials-carousel .testimonial-card {
+  flex: 0 0 240px;
+  min-width: 240px;
+  max-width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  scroll-snap-align: start;
+}
+
+@media (max-width: 900px) {
+  .index-hero .testimonials-carousel .testimonial-card {
+    flex-basis: 220px;
+    min-width: 220px;
+    max-width: 220px;
+  }
+}
+
+.testimonial-card p {
+  line-height: 1.6;
+}
+
+.stars {
+  color: #fbbf24;
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+.author {
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 5px;
+}
+
+.floating-whatsapp {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #25d366;
+  color: #ffffff;
+  font-size: 30px;
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.35);
+  z-index: 120;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.floating-whatsapp:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 16px 34px rgba(37, 211, 102, 0.45);
+  filter: saturate(1.05);
+}
+
+[data-theme="light"] .floating-whatsapp {
+  box-shadow: 0 12px 26px rgba(22, 163, 74, 0.28);
+}
+
+@media (max-width: 700px) {
+  .floating-whatsapp {
+    right: 14px;
+    bottom: 14px;
+    width: 54px;
+    height: 54px;
+    font-size: 28px;
+  }
+}
+
+.services-intro {
+  width: 100%;
+  max-width: none;
+}
+
+.services-intro p {
+  max-width: none;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.services-grid .card {
+  padding: 18px;
+}
+
+.services-grid .card img {
+  height: 140px;
+  object-fit: cover;
+}
+
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
 /* CARDS DE DECISÃO */
 .decision-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .decision-card {
@@ -122,6 +257,10 @@
   color: var(--primary);
   transition: 0.3s;
   flex-shrink: 0;
+}
+
+[data-theme="light"] .index-hero .card-icon-box {
+  background: rgba(15, 23, 42, 0.14);
 }
 
 .decision-card:hover .card-icon-box {

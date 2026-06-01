@@ -6,22 +6,30 @@
     <title>PMOC e Rotinas Preventivas | NTech Climatizacao</title>
     <meta
       name="description"
-      content="Atendimento para PMOC e rotinas preventivas de ar-condicionado em ambientes comerciais e empresariais."
+      content="Plano de Manutencao, Operacao e Controle (PMOC) para clinicas, escritorios, escolas e comercios em São João da Boa Vista e regiao. Exigencia legal e prevencao tecnica."
     />
+    <link rel="icon" href="../assets/logo.png" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <script defer type="module" src="../js/main.js"></script>
   </head>
   <body>
     <nav class="navbar">
       <div class="nav-wrapper">
-        <a href="../index.html" class="imglogo"><img src="../assets/logo.png" alt="NTech" /></a>
+        <a href="../index.html" class="imglogo"><img src="../assets/logo.png" alt="NTech Climatizacao" /></a>
+
         <div class="menu" id="mainMenu">
-          <a href="../index.html">Inicio</a>
-          <a href="#empresa">Para empresas</a>
-          <a href="#rotina">Rotina</a>
-          <a href="#contato">Contato</a>
+          <a href="../index.html#hero">Início</a>
+          <a href="../index.html#servicos">Serviços</a>
+          <a href="instalacao.html">Instalação</a>
+          <a href="manutencao.html">Manutenção</a>
+          <a href="higienizacao.html">Higienização</a>
+          <a href="pmoc.html">PMOC</a>
+          <a href="dicas.html">Dicas</a>
+          <a href="../index.html#contato">Contato</a>
         </div>
+
         <div class="actions">
-          <a href="https://wa.me/5519971195905?text=Quero%20informacoes%20sobre%20PMOC%20e%20manutencao%20preventiva." class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Consultar</a>
+          <a href="https://wa.me/5519971195905?text=Ola%2C%20quero%20um%20orcamento%20para%20ar-condicionado." class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="padding: 8px 16px"><i class="fab fa-whatsapp"></i> <span>Falar Agora</span></a>
           <button class="btn-icon" id="theme-toggle" aria-label="Alternar tema"><i class="fas fa-sun"></i></button>
           <button class="hamburger" id="menuToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
         </div>
@@ -29,6 +37,8 @@
     </nav>
 
     <main class="page">
+
+      <!-- Hero -->
       <section class="index-hero" style="min-height: 60vh">
         <div class="container">
           <div class="hero-grid">
@@ -37,52 +47,394 @@
               <h1
                 class="hero-title"
                 data-ab-test="pmoc_headline"
-                data-ab-a="Plano tecnico para ambientes comerciais"
-                data-ab-b="PMOC e rotina preventiva para reduzir paradas"
+                data-ab-a="Plano de Manutencao, Operacao e Controle para sua empresa"
+                data-ab-b="PMOC: prevencao, conformidade e menos paradas inesperadas"
               >
-                Plano tecnico para ambientes comerciais
+                Plano de Manutencao, Operacao e Controle para sua empresa
               </h1>
-              <p class="hero-description">Rotina de manutencao para reduzir falhas, manter conforto termico e preservar desempenho dos equipamentos em Aguai e regiao.</p>
-              <a class="btn btn-primary" href="https://wa.me/5519971195905?text=Quero%20proposta%20de%20PMOC%20para%20empresa." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> <span data-ab-test="pmoc_cta" data-ab-a="Solicitar proposta" data-ab-b="Receber plano preventivo">Solicitar proposta</span></a>
+              <p class="hero-description">
+                Rotina tecnica estruturada para ambientes comerciais. Reduz falhas, mantém conforto termico e garante
+                conformidade com a legislacao vigente em São João da Boa Vista e regiao.
+              </p>
+              <a class="btn btn-primary" href="https://wa.me/5519971195905?text=Quero%20proposta%20de%20PMOC%20para%20empresa." target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i>
+                <span data-ab-test="pmoc_cta" data-ab-a="Solicitar proposta" data-ab-b="Receber plano preventivo">Solicitar proposta</span>
+              </a>
             </div>
             <div class="card" data-reveal>
-              <img src="../assets/images/services/redes.jpg" alt="PMOC para empresas" style="border-radius: 10px; margin-bottom: 12px" />
-              <p style="margin: 0">Ideal para escritorios, clinicas, lojas e ambientes com uso continuo.</p>
+              <img src="../assets/images/services/pmoc.jpeg" alt="PMOC para empresas" style="border-radius: 10px; margin-bottom: 12px" />
+              <p style="margin: 0">Atendemos clinicas, escritorios, escolas, farmacias e comercios com rotina de manutencao documentada.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="empresa" style="padding: 70px 0; background: var(--bg-solid)">
-        <div class="container grid-2">
-          <article class="card" data-reveal><h3>Oferta local da semana</h3><p>Diagnostico inicial para empresas com proposta de rotina preventiva personalizada.</p></article>
-          <article class="card" data-reveal><h3>Menos paradas inesperadas</h3><p>Acompanhamento preventivo reduz ocorrencias corretivas.</p></article>
-          <article class="card" data-reveal><h3>Melhor desempenho continuo</h3><p>Equipamentos operam com maior estabilidade.</p></article>
-          <article class="card" data-reveal><h3>Historico de manutencao</h3><p>Controle de execucoes e periodicidade por unidade.</p></article>
-          <article class="card" data-reveal><h3>Padrao para auditoria interna</h3><p>Organizacao tecnica da rotina de climatizacao.</p></article>
+      <!-- O que e o PMOC -->
+      <section style="padding: 70px 0; background: var(--bg-solid)">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: 40px" data-reveal>
+            <h2>O que é o PMOC?</h2>
+            <p style="max-width: 760px; margin: 12px auto 0 auto; color: var(--text-muted)">
+              O PMOC — Plano de Manutencao, Operacao e Controle — é um documento tecnico exigido pela
+              <strong>Portaria MS 3.523/98</strong> e pela <strong>Lei 13.589/2018</strong> para edificacoes com
+              sistema de climatizacao artificial. Ele define as rotinas obrigatorias de manutencao preventiva,
+              registra o historico de execucoes e orienta sobre qualidade do ar interior.
+            </p>
+          </div>
+          <div class="grid-2">
+            <article class="card" data-reveal>
+              <h3><i class="fas fa-gavel" style="margin-right: 8px; color: var(--accent)"></i>Exigencia legal</h3>
+              <p>
+                Empresas com sistema de ar-condicionado central ou capacidade instalada superior a 5 TR
+                (toneladas de refrigeracao) sao obrigadas a manter o PMOC ativo e atualizado.
+                O descumprimento pode gerar autuacoes sanitarias.
+              </p>
+            </article>
+            <article class="card" data-reveal>
+              <h3><i class="fas fa-file-alt" style="margin-right: 8px; color: var(--accent)"></i>Documentacao tecnica</h3>
+              <p>
+                Alem de cumprir a norma, o PMOC gera historico de todas as intervencoes, facilita auditorias
+                internas, subsidia decisoes de troca de equipamento e comprova diligencia tecnica em caso
+                de vistoria.
+              </p>
+            </article>
+            <article class="card" data-reveal>
+              <h3><i class="fas fa-lungs" style="margin-right: 8px; color: var(--accent)"></i>Qualidade do ar</h3>
+              <p>
+                Ambientes climatizados sem manutencao acumulam fungos, bacterias e particulados nos
+                filtros e dutos. O PMOC garante controle periodico da qualidade do ar interior,
+                protegendo colaboradores e clientes.
+              </p>
+            </article>
+            <article class="card" data-reveal>
+              <h3><i class="fas fa-chart-line" style="margin-right: 8px; color: var(--accent)"></i>Reducao de custos</h3>
+              <p>
+                Manutencao preventiva regular custa ate 5x menos que corretiva emergencial. Com o PMOC
+                ativo, os equipamentos operam com maior eficiencia, reduzindo o consumo de energia e
+                prolongando a vida util.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="rotina" style="padding: 70px 0">
-        <div class="container grid-2">
-          <div class="card" data-reveal><h3>1. Levantamento inicial</h3><p>Mapeamento dos equipamentos e condicoes atuais.</p></div>
-          <div class="card" data-reveal><h3>2. Cronograma tecnico</h3><p>Definicao da frequencia conforme uso do ambiente.</p></div>
-          <div class="card" data-reveal><h3>3. Execucao periodica</h3><p>Limpeza, revisao e testes de performance.</p></div>
-          <div class="card" data-reveal><h3>4. Relatorio e melhorias</h3><p>Registro das atividades e recomendacoes tecnicas.</p></div>
+      <!-- Quem precisa -->
+      <section style="padding: 70px 0">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: 40px" data-reveal>
+            <h2>Quem precisa de PMOC?</h2>
+            <p style="color: var(--text-muted)">Qualquer ambiente comercial com ar-condicionado se beneficia. Esses segmentos têm necessidade mais critica:</p>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px">
+            <article class="card" data-reveal style="text-align: center">
+              <i class="fas fa-stethoscope" style="font-size: 2rem; color: var(--accent); margin-bottom: 12px; display: block"></i>
+              <h4>Clinicas e consultorios</h4>
+              <p style="font-size: 0.9rem">Exigencia sanitaria e controle de infeccoes por qualidade do ar.</p>
+            </article>
+            <article class="card" data-reveal style="text-align: center">
+              <i class="fas fa-building" style="font-size: 2rem; color: var(--accent); margin-bottom: 12px; display: block"></i>
+              <h4>Escritorios e coworkings</h4>
+              <p style="font-size: 0.9rem">Conforto termico direto na produtividade da equipe.</p>
+            </article>
+            <article class="card" data-reveal style="text-align: center">
+              <i class="fas fa-graduation-cap" style="font-size: 2rem; color: var(--accent); margin-bottom: 12px; display: block"></i>
+              <h4>Escolas e instituicoes</h4>
+              <p style="font-size: 0.9rem">Saude dos alunos e conformidade com normas educacionais.</p>
+            </article>
+            <article class="card" data-reveal style="text-align: center">
+              <i class="fas fa-prescription-bottle" style="font-size: 2rem; color: var(--accent); margin-bottom: 12px; display: block"></i>
+              <h4>Farmacias e laboratorios</h4>
+              <p style="font-size: 0.9rem">Temperatura e umidade controladas para conservacao de produtos.</p>
+            </article>
+            <article class="card" data-reveal style="text-align: center">
+              <i class="fas fa-store" style="font-size: 2rem; color: var(--accent); margin-bottom: 12px; display: block"></i>
+              <h4>Lojas e comercios</h4>
+              <p style="font-size: 0.9rem">Conforto do cliente e reducao de consumo energetico.</p>
+            </article>
+            <article class="card" data-reveal style="text-align: center">
+              <i class="fas fa-hotel" style="font-size: 2rem; color: var(--accent); margin-bottom: 12px; display: block"></i>
+              <h4>Hoteis e pousadas</h4>
+              <p style="font-size: 0.9rem">Multiplas unidades com rotina unica e historico centralizado.</p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="contato" style="padding: 0 0 90px 0">
+      <!-- Checklist por frequencia -->
+      <section style="padding: 70px 0; background: var(--bg-solid)">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: 40px" data-reveal>
+            <h2>O que esta incluido no plano?</h2>
+            <p style="color: var(--text-muted)">Cada visita tecnica segue um protocolo definido, organizado por frequencia de execucao.</p>
+          </div>
+          <div class="grid-2">
+            <article class="card" data-reveal>
+              <h3 style="display: flex; align-items: center; gap: 8px">
+                <span style="background: var(--accent); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; flex-shrink: 0">M</span>
+                Visita Mensal
+              </h3>
+              <ul style="margin: 12px 0 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px">
+                <li style="display: flex; gap: 8px"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0"></i> Limpeza e inspecao dos filtros de ar</li>
+                <li style="display: flex; gap: 8px"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0"></i> Verificacao visual de evaporadora e condensadora</li>
+                <li style="display: flex; gap: 8px"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0"></i> Checagem de temperatura de saida de ar</li>
+                <li style="display: flex; gap: 8px"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0"></i> Registro no livro de ocorrencias do PMOC</li>
+              </ul>
+            </article>
+            <article class="card" data-reveal>
+              <h3 style="display: flex; align-items: center; gap: 8px">
+                <span style="background: var(--accent); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; flex-shrink: 0">T</span>
+                Visita Trimestral
+              </h3>
+              <ul style="margin: 12px 0 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px">
+                <li style="display: flex; gap: 8px"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0"></i> Limpeza interna da evaporadora (serpentinas)</li>
+                <li style="display: flex; gap: 8px"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0"></i> Inspecao e limpeza do sistema de drenagem</li>
+                <li style="display: flex; gap: 8px"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0"></i> Verificacao de ruidos e vibracoes anormais</li>
+                <li style="display: flex; gap: 8px"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0"></i> Relatorio trimestral com fotos e observacoes</li>
+              </ul>
+            </article>
+            <article class="card" data-reveal>
+              <h3 style="display: flex; align-items: center; gap: 8px">
+                <span style="background: var(--accent); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; flex-shrink: 0">S</span>
+                Visita Semestral
+              </h3>
+              <ul style="margin: 12px 0 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px">
+                <li style="display: flex; gap: 8px"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0"></i> Limpeza completa da condensadora</li>
+                <li style="display: flex; gap: 8px"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0"></i> Verificacao de carga e pressao do fluido refrigerante</li>
+                <li style="display: flex; gap: 8px"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0"></i> Lubrificacao de partes moveis</li>
+                <li style="display: flex; gap: 8px"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0"></i> Teste de eficiencia energetica</li>
+              </ul>
+            </article>
+            <article class="card" data-reveal>
+              <h3 style="display: flex; align-items: center; gap: 8px">
+                <span style="background: var(--accent); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; flex-shrink: 0">A</span>
+                Revisao Anual
+              </h3>
+              <ul style="margin: 12px 0 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px">
+                <li style="display: flex; gap: 8px"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0"></i> Revisao eletrica: conexoes, disjuntores e cabeamento</li>
+                <li style="display: flex; gap: 8px"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0"></i> Avaliacao de vida util e previsao de substituicao</li>
+                <li style="display: flex; gap: 8px"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0"></i> Relatorio anual completo de conformidade</li>
+                <li style="display: flex; gap: 8px"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0"></i> Renovacao do cronograma para o ano seguinte</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Exemplos de ambientes -->
+      <section style="padding: 70px 0">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: 40px" data-reveal>
+            <h2>Exemplos de planos atendidos</h2>
+            <p style="color: var(--text-muted)">Cada ambiente tem uma rotina adaptada ao volume de uso e numero de unidades.</p>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px">
+
+            <article class="card" data-reveal>
+              <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px">
+                <i class="fas fa-stethoscope" style="font-size: 1.5rem; color: var(--accent)"></i>
+                <div>
+                  <h4 style="margin: 0">Clinica Medica</h4>
+                  <span style="font-size: 0.8rem; color: var(--text-muted)">4 splits — São João da Boa Vista/SP</span>
+                </div>
+              </div>
+              <p>
+                Visitas mensais para limpeza de filtros nas salas de atendimento e laboratorio. Relatorio
+                trimestral entregue para protocolo de vigilancia sanitaria. Higienizacao quimica semestral
+                incluida no contrato.
+              </p>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0">
+                <i class="fas fa-calendar-check" style="margin-right: 4px"></i>Desde 2023 sem nenhuma corretiva emergencial.
+              </p>
+            </article>
+
+            <article class="card" data-reveal>
+              <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px">
+                <i class="fas fa-building" style="font-size: 1.5rem; color: var(--accent)"></i>
+                <div>
+                  <h4 style="margin: 0">Escritorio Corporativo</h4>
+                  <span style="font-size: 0.8rem; color: var(--text-muted)">8 splits — São João da Boa Vista/SP</span>
+                </div>
+              </div>
+              <p>
+                Plano trimestral com limpeza completa de evaporadoras e condensadoras. Historico digital
+                de cada unidade. Controle de temperatura media por sala integrado ao relatorio de desempenho
+                energetico.
+              </p>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0">
+                <i class="fas fa-bolt" style="margin-right: 4px"></i>Reducao de 12% na conta de energia no primeiro ano.
+              </p>
+            </article>
+
+            <article class="card" data-reveal>
+              <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px">
+                <i class="fas fa-graduation-cap" style="font-size: 1.5rem; color: var(--accent)"></i>
+                <div>
+                  <h4 style="margin: 0">Colegio Particular</h4>
+                  <span style="font-size: 0.8rem; color: var(--text-muted)">14 splits — São João da Boa Vista/SP</span>
+                </div>
+              </div>
+              <p>
+                Manutencao preventiva nas ferias escolares para nao impactar as aulas. Mapeamento de
+                todas as salas com codigo de identificacao por unidade. Relatorio entregue ao setor
+                administrativo para arquivo e auditoria interna.
+              </p>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0">
+                <i class="fas fa-shield-alt" style="margin-right: 4px"></i>Conformidade total com normas da Secretaria de Educacao.
+              </p>
+            </article>
+
+            <article class="card" data-reveal>
+              <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px">
+                <i class="fas fa-store" style="font-size: 1.5rem; color: var(--accent)"></i>
+                <div>
+                  <h4 style="margin: 0">Rede de Farmacias</h4>
+                  <span style="font-size: 0.8rem; color: var(--text-muted)">3 unidades — regiao de São João da Boa Vista/SP</span>
+                </div>
+              </div>
+              <p>
+                Um unico contrato para tres lojas com cronograma unificado. Visitas sem necessidade
+                de agendamento individual. Temperatura monitorada para garantir conservacao de
+                medicamentos termolabeis.
+              </p>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0">
+                <i class="fas fa-file-contract" style="margin-right: 4px"></i>Documentacao aceita em auditorias da ANVISA.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Como funciona -->
+      <section id="rotina" style="padding: 70px 0; background: var(--bg-solid)">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: 40px" data-reveal>
+            <h2>Como funciona o processo</h2>
+            <p style="color: var(--text-muted)">Da contratacao ao relatorio, todo o ciclo é documentado e organizado.</p>
+          </div>
+          <div class="grid-2">
+            <div class="card" data-reveal>
+              <h3><span style="color: var(--accent)">1.</span> Levantamento inicial</h3>
+              <p>
+                Visita tecnica para mapear todos os equipamentos: modelo, capacidade, localizacao e
+                condicao atual. Esse inventario é a base do plano personalizado para sua empresa.
+              </p>
+            </div>
+            <div class="card" data-reveal>
+              <h3><span style="color: var(--accent)">2.</span> Cronograma personalizado</h3>
+              <p>
+                Definimos a frequencia de cada atividade conforme o tipo do ambiente, volume de uso
+                e exigencias legais. Voce recebe o calendario anual com todas as datas programadas.
+              </p>
+            </div>
+            <div class="card" data-reveal>
+              <h3><span style="color: var(--accent)">3.</span> Execucao e registro</h3>
+              <p>
+                Cada visita segue o protocolo tecnico previsto no PMOC. Apos o servico, registramos
+                as atividades realizadas, pecas substituidas e observacoes tecnicas com fotos.
+              </p>
+            </div>
+            <div class="card" data-reveal>
+              <h3><span style="color: var(--accent)">4.</span> Relatorio e recomendacoes</h3>
+              <p>
+                Voce recebe relatorio digital apos cada visita e um consolidado periodico com
+                historico, alertas de pecas com desgaste e sugestoes para otimizacao do sistema.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section style="padding: 70px 0">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: 40px" data-reveal>
+            <h2>Perguntas frequentes</h2>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 16px; max-width: 820px; margin: 0 auto">
+
+            <article class="card" data-reveal>
+              <h4 style="margin-bottom: 8px">O PMOC é obrigatorio por lei?</h4>
+              <p style="margin: 0">
+                Sim. A Portaria MS 3.523/98 e a Lei Federal 13.589/2018 exigem o PMOC para
+                edificacoes com sistemas de climatizacao artificial. O nao cumprimento sujeita
+                a empresa a autuacoes pela vigilancia sanitaria e pode responsabilizar o gestor
+                em casos de problemas de saude dos ocupantes.
+              </p>
+            </article>
+
+            <article class="card" data-reveal>
+              <h4 style="margin-bottom: 8px">Qual a diferenca entre PMOC e manutencao avulsa?</h4>
+              <p style="margin: 0">
+                A manutencao avulsa é pontual — voce chama quando algo para ou apresenta falha.
+                O PMOC é um plano preventivo estruturado, com cronograma definido, frequencia
+                tecnica adequada e documentacao de cada intervencao. O resultado é menos corretivas,
+                maior vida util dos equipamentos e conformidade legal.
+              </p>
+            </article>
+
+            <article class="card" data-reveal>
+              <h4 style="margin-bottom: 8px">Como recebo o relatorio tecnico?</h4>
+              <p style="margin: 0">
+                Apos cada visita voce recebe um documento digital (PDF) com descricao das
+                atividades, fotos, observacoes tecnicas e proximas datas programadas. O
+                historico completo fica disponivel para auditorias sanitarias ou internas.
+              </p>
+            </article>
+
+            <article class="card" data-reveal>
+              <h4 style="margin-bottom: 8px">Minha empresa tem apenas 2 splits. Precisa de PMOC?</h4>
+              <p style="margin: 0">
+                A obrigacao legal aplica-se a ambientes com grande capacidade de climatizacao
+                instalada — na pratica, empresas com 3 ou mais aparelhos de maior porte (24.000 BTU
+                ou acima) operando no mesmo edificio. Mesmo fora desse caso, o PMOC e recomendado
+                para qualquer empresa que dependa do ar-condicionado: reduz custos, evita paradas
+                e organiza a rotina tecnica com custo acessivel.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section style="padding: 0 0 90px 0">
         <div class="container">
           <div class="card" style="text-align: center" data-reveal>
             <h2 style="margin-bottom: 10px">Solicite proposta para sua empresa</h2>
-            <p style="max-width: 700px; margin: 0 auto 20px">Envie quantidade de unidades e cidade para avaliarmos uma rotina adequada.</p>
-            <a class="btn btn-primary" href="https://wa.me/5519971195905?text=Preciso%20de%20proposta%20de%20PMOC%20e%20rotina%20preventiva." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Falar com especialista</a>
+            <p style="max-width: 700px; margin: 0 auto 20px">
+              Informe a quantidade de equipamentos e o tipo de ambiente pelo WhatsApp.
+              Montamos um plano personalizado com cronograma e valor fixo mensal.
+            </p>
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/5519971195905?text=Preciso%20de%20proposta%20de%20PMOC%20e%20rotina%20preventiva."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-whatsapp"></i> Falar com especialista
+            </a>
           </div>
         </div>
       </section>
+
     </main>
 
-    <script type="module" src="../js/main.js"></script>
+    <a
+      href="https://wa.me/5519971195905?text=Ola%2C%20quero%20um%20orcamento%20para%20ar-condicionado."
+      class="floating-whatsapp"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar no WhatsApp"
+    >
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <footer class="site-footer" style="padding: 30px 0; border-top: 1px solid var(--border)">
+      <div class="container" style="text-align: center">
+        <div>© <span id="year"></span> NTech Climatizacao - Todos os direitos reservados</div>
+        <div style="color: var(--text-muted); margin-top: 8px">Instalacao, manutencao e higienizacao de ar-condicionado split</div>
+      </div>
+    </footer>
   </body>
 </html>

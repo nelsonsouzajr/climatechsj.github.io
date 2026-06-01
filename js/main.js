@@ -13,30 +13,30 @@ import { renderTopbar } from "./nav.js";
 document.addEventListener('DOMContentLoaded', () => {
   console.log("%cNTech System: Inicializando...", "color:#6366f1; font-weight:bold;");
 
-  // 1. Inicializa o Tema (Dark/Light)
-  initTheme();
-
-  // 1.1. Normaliza a topbar em todas as paginas
+  // 1. Normaliza a topbar em todas as paginas
   renderTopbar();
 
-  // 2. Inicializa o Idioma
+  // 2. Inicializa o Tema (Dark/Light)
+  initTheme();
+
+  // 3. Inicializa o Idioma
   initLanguage();
 
-  // 3. Inicializa o Menu Mobile
+  // 4. Inicializa o Menu Mobile
   initMobileMenu();
 
-  // 4. Inicializa Animações (Scroll, Parallax, Cursor)
+  // 5. Inicializa Animações (Scroll, Parallax, Cursor)
   initAnimations();
 
-  // 5. Inicializa Formulários e Máscaras
+  // 6. Inicializa Formulários e Máscaras
   initForms();
 
-  // 6. Inicializa Carrossel (se houver na página)
+  // 7. Inicializa Carrossel (se houver na página)
   initCarousel();
 
-  // 7. Inicializa rastreio de marketing e origem de lead
+  // 8. Inicializa rastreio de marketing e origem de lead
   initMarketing();
 
-  // 8. Inicializa testes A/B de copy por campanha/cidade
+  // 9. Inicializa testes A/B de copy por campanha/cidade
   initAbTesting();
 });

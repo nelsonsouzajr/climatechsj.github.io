@@ -4,6 +4,7 @@ import { ANALYTICS_CONFIG } from "./analytics-config.js";
 
 const STORAGE_KEY = "ntech-attribution";
 const EVENT_STATS_KEY = "ntech-event-stats-v1";
+const SITE_ORIGIN_LABEL = "www.ntechclima.com.br";
 const TRACK_PARAMS = [
   "utm_source",
   "utm_medium",
@@ -96,14 +97,17 @@ function enhanceWhatsAppLinks() {
     try {
       const url = new URL(link.href);
       const raw = url.searchParams.get("text") || "Ola, gostaria de um orcamento para ar-condicionado.";
-      const source = attribution.utm_source || "direct";
-      const campaign = attribution.utm_campaign || "organic";
 
       const cleanMessage = raw
         .replace(/\s*\[origem:.*$/i, "")
         .trim();
 
-      const fullMessage = `${cleanMessage} [origem:${source}/${campaign}]`;
+      const source = attribution.utm_source || "site";
+      const campaign = attribution.utm_campaign || "";
+      const normalizedSource = source === "direct" ? SITE_ORIGIN_LABEL : source;
+      const normalizedCampaign = campaign === "organic" ? "" : campaign;
+      const originScope = normalizedCampaign ? `${normalizedSource}/${normalizedCampaign}` : normalizedSource;
+      const fullMessage = `${cleanMessage} [origem:${originScope}]`;
       url.searchParams.set("text", fullMessage);
       link.href = url.toString();
     } catch {

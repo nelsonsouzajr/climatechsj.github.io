@@ -7,7 +7,6 @@ const NAV_ITEMS = [
   { label: "Higienização", href: "pages/higienizacao.html" },
   { label: "PMOC", href: "pages/pmoc.html" },
   { label: "Dicas", href: "pages/dicas.html" },
-  { label: "Relatório", href: "pages/relatorio.html" },
   { label: "Contato", href: "#contato" }
 ];
 
@@ -59,7 +58,9 @@ function buildLink(item, rootPath, currentPath) {
 }
 
 function resolveHref(href, rootPath) {
-  if (href.startsWith("#")) return href;
+  if (href.startsWith("#")) {
+    return rootPath ? `${rootPath}index.html${href}` : href;
+  }
   return `${rootPath}${href}`;
 }
 
