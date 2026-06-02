@@ -1,13 +1,13 @@
 // nav.js - Renderizacao centralizada da topbar em todas as paginas
 const NAV_ITEMS = [
-  { label: "Início", href: "#hero" },
-  { label: "Serviços", href: "#serviços" },
-  { label: "Instalação", href: "pages/instalação.html" },
-  { label: "Manutenção", href: "pages/manutenção.html" },
-  { label: "Higienização", href: "pages/higienização.html" },
-  { label: "PMOC", href: "pages/pmoc.html" },
-  { label: "Dicas", href: "pages/dicas.html" },
-  { label: "Contato", href: "#contato" }
+  { label: "Início",      href: "#hero" },
+  { label: "Serviços",   href: "pages/assistencia.html" },
+  { label: "Instalação",  href: "pages/instalacao.html" },
+  { label: "Manutenção",  href: "pages/manutencao.html" },
+  { label: "Higienização",href: "pages/higienizacao.html" },
+  { label: "PMOC",        href: "pages/pmoc.html" },
+  { label: "Dicas",       href: "pages/dicas.html" },
+  { label: "Contato",     href: "#contato" }
 ];
 
 export function renderTopbar() {
@@ -20,7 +20,7 @@ export function renderTopbar() {
 
   navbar.innerHTML = `
     <div class="nav-wrapper">
-      <a href="${rootPath}index.html" class="imglogo"><img src="${rootPath}assets/logo.png" alt="ClimatEch Climatizacao" /></a>
+      <a href="${rootPath}index.html" class="imglogo"><img src="${rootPath}assets/logo.png" alt="ClimatEch Climatização" /></a>
 
       <div class="menu" id="mainMenu">
         ${NAV_ITEMS.map((item) => buildLink(item, rootPath, currentPath)).join("")}
@@ -72,13 +72,12 @@ function isHomePage(currentPath) {
 function isActiveLink(href, currentPath) {
   const normalized = currentPath.toLowerCase();
   if (href === "#hero") return isHomePage(normalized);
-  if (href.includes("instalação.html")) return normalized.includes("instalação.html");
-  if (href.includes("manutenção.html")) return normalized.includes("manutenção.html") || normalized.includes("assistencia.html");
-  if (href.includes("higienização.html")) return normalized.includes("higienização.html");
+  if (href.includes("assistencia.html")) return normalized.includes("assistencia.html");
+  if (href.includes("instalacao.html")) return normalized.includes("instalacao.html");
+  if (href.includes("manutencao.html")) return normalized.includes("manutencao.html");
+  if (href.includes("higienizacao.html")) return normalized.includes("higienizacao.html");
   if (href.includes("pmoc.html")) return normalized.includes("pmoc.html");
   if (href.includes("dicas.html")) return normalized.includes("dicas.html");
-  if (href.includes("relatorio.html")) return normalized.includes("relatorio.html");
-  if (href === "#serviços") return isHomePage(normalized);
   if (href === "#contato") return isHomePage(normalized);
   return false;
 }

@@ -360,21 +360,29 @@
 /* Responsivo Mobile */
 @media (max-width: 900px) {
   .hero-grid {
-    grid-template-columns: 1fr; /* Vira uma coluna só */
+    grid-template-columns: 1fr;
     text-align: center;
   }
-  
-  .hero-carousel-col {
-    display: none; /* Esconde carousel vertical no mobile para não ocupar tela */
-    /* Opcional: Você pode reativar como horizontal se quiser, mas vertical no mobile fica ruim */
-  }
+
+  .hero-carousel-col { display: none; }
 
   .hero-content { margin: 0 auto; }
   .decision-wrapper { text-align: left; }
   .decision-card { padding: 15px; }
-  
-  /* Ajuste para centralizar tags no mobile */
   .hero-tag { margin: 0 auto 20px; }
+}
+
+@media (max-width: 768px) {
+  /* Reduz padding do hero nas subpáginas para não cortar conteúdo */
+  .index-hero {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    min-height: auto;
+  }
+  /* Oculta o card com imagem no hero em tela pequena */
+  .index-hero .hero-grid > .card {
+    display: none;
+  }
 }
 
 /* ---------- SEÇÃO SOBRE (REVAMPED) ---------- */
