@@ -167,6 +167,17 @@
   
   .menu a::after { display: none; }
   .hamburger { display: flex; }
+
+  /* Oculta texto do botão WhatsApp no mobile, mantém só o ícone */
+  .actions .btn span { display: none; }
+  .actions .btn { padding: 8px 12px; min-width: 40px; }
+  .actions { gap: 8px; }
+
+  /* Hero grid das subpáginas empilha no mobile */
+  .hero-inner {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-media { display: none; }
 }
 
 /* Espaçamento para Header Fixo */

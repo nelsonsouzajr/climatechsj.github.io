@@ -48,7 +48,7 @@ function resolveCityHint(utmTerm) {
   const seed = (fromUrl || utmTerm || "").toLowerCase();
 
   if (seed.includes("aguai")) return "aguai";
-  if (seed.includes("sao joao") || seed.includes("boa vista")) return "sao_joao_da_boa_vista";
+  if (seed.includes("são joao") || seed.includes("boa vista")) return "sao_joao_da_boa_vista";
   if (seed.includes("mogi guacu")) return "mogi_guacu";
   if (seed.includes("mogi mirim")) return "mogi_mirim";
   if (seed.includes("pinhal")) return "espirito_santo_do_pinhal";

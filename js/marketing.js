@@ -96,7 +96,7 @@ function enhanceWhatsAppLinks() {
   links.forEach((link) => {
     try {
       const url = new URL(link.href);
-      const raw = url.searchParams.get("text") || "Ola, gostaria de um orcamento para ar-condicionado.";
+      const raw = url.searchParams.get("text") || "Ola, gostaria de um orçamento para ar-condicionado.";
 
       const cleanMessage = raw
         .replace(/\s*\[origem:.*$/i, "")
@@ -155,9 +155,9 @@ function trackViewContent() {
 
 function getServicePageType() {
   const path = window.location.pathname.toLowerCase();
-  if (path.includes("instalacao")) return "instalacao";
-  if (path.includes("manutencao")) return "manutencao";
-  if (path.includes("higienizacao")) return "higienizacao";
+  if (path.includes("instalação")) return "instalação";
+  if (path.includes("manutenção")) return "manutenção";
+  if (path.includes("higienização")) return "higienização";
   if (path.includes("pmoc")) return "pmoc";
   if (path.includes("dicas")) return "conteudo";
   return "home";
@@ -190,7 +190,7 @@ function initMetaPixel() {
   if (!pixelId) return;
   if (window.fbq) return;
 
-  // Snippet padrao Meta Pixel com protecao para inicializacao unica
+  // Snippet padrao Meta Pixel com protecao para inicializacao única
   (function (f, b, e, v, n, t, s) {
     if (f.fbq) return;
     n = f.fbq = function () {
@@ -288,6 +288,6 @@ function persistEventStats(eventName, payload) {
 
     localStorage.setItem(EVENT_STATS_KEY, JSON.stringify(state));
   } catch {
-    // Nao bloquear fluxo de conversao por falha de localStorage
+    // Não bloquear fluxo de conversao por falha de localStorage
   }
 }

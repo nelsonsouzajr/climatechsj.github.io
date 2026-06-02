@@ -25,10 +25,15 @@ img {
 }
 
 .imglogo {
-  font-family: 'Poppins', 'Inter', sans-serif;
-  color: var(--primary);
-  max-width: 5%;
+  display: flex;
   align-items: center;
+  flex-shrink: 0;
+}
+
+.imglogo img {
+  height: 54px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* ---------- VARIÁVEIS GLOBAIS (MODO CLARO / LIGHT) ---------- */

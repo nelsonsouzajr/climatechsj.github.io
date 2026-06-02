@@ -1,10 +1,10 @@
 // nav.js - Renderizacao centralizada da topbar em todas as paginas
 const NAV_ITEMS = [
   { label: "Início", href: "#hero" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Instalação", href: "pages/instalacao.html" },
-  { label: "Manutenção", href: "pages/manutencao.html" },
-  { label: "Higienização", href: "pages/higienizacao.html" },
+  { label: "Serviços", href: "#serviços" },
+  { label: "Instalação", href: "pages/instalação.html" },
+  { label: "Manutenção", href: "pages/manutenção.html" },
+  { label: "Higienização", href: "pages/higienização.html" },
   { label: "PMOC", href: "pages/pmoc.html" },
   { label: "Dicas", href: "pages/dicas.html" },
   { label: "Contato", href: "#contato" }
@@ -28,7 +28,7 @@ export function renderTopbar() {
 
       <div class="actions">
         <a
-          href="https://wa.me/5519971195905?text=Ola%2C%20quero%20um%20orcamento%20para%20ar-condicionado."
+          href="https://wa.me/5519993063260?text=Ola%2C%20quero%20um%20orcamento%20para%20ar-condicionado."
           class="btn btn-primary"
           style="padding: 8px 16px"
           target="_blank"
@@ -72,13 +72,13 @@ function isHomePage(currentPath) {
 function isActiveLink(href, currentPath) {
   const normalized = currentPath.toLowerCase();
   if (href === "#hero") return isHomePage(normalized);
-  if (href.includes("instalacao.html")) return normalized.includes("instalacao.html");
-  if (href.includes("manutencao.html")) return normalized.includes("manutencao.html") || normalized.includes("assistencia.html");
-  if (href.includes("higienizacao.html")) return normalized.includes("higienizacao.html");
+  if (href.includes("instalação.html")) return normalized.includes("instalação.html");
+  if (href.includes("manutenção.html")) return normalized.includes("manutenção.html") || normalized.includes("assistencia.html");
+  if (href.includes("higienização.html")) return normalized.includes("higienização.html");
   if (href.includes("pmoc.html")) return normalized.includes("pmoc.html");
   if (href.includes("dicas.html")) return normalized.includes("dicas.html");
   if (href.includes("relatorio.html")) return normalized.includes("relatorio.html");
-  if (href === "#servicos") return isHomePage(normalized);
+  if (href === "#serviços") return isHomePage(normalized);
   if (href === "#contato") return isHomePage(normalized);
   return false;
 }
