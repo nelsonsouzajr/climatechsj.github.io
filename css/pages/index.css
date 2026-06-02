@@ -373,14 +373,41 @@
 }
 
 @media (max-width: 768px) {
-  /* Reduz padding do hero nas subpáginas para não cortar conteúdo */
+  /* Reduz padding do hero nas subpáginas */
   .index-hero {
     padding-top: 40px;
     padding-bottom: 30px;
     min-height: auto;
+    /* Garante contenção de filtros CSS que escapam overflow:hidden */
+    contain: paint;
   }
-  /* Oculta o card com imagem no hero em tela pequena */
+
+  /* Oculta card de imagem no hero em tela pequena */
   .index-hero .hero-grid > .card {
+    display: none;
+  }
+
+  /* Remove drop-shadow no mobile — o filtro escapa do clipping em alguns browsers */
+  .index-hero .hero-title span.text-software,
+  .index-hero .hero-title span.text-hardware {
+    filter: none;
+  }
+
+  /* Força font-size menor para texto longo não vazar */
+  .hero-title {
+    font-size: clamp(1.6rem, 6.5vw, 2.2rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Força 1 coluna nos cards de decisão em telas pequenas */
+  .decision-wrapper {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  /* Cursor glow não faz sentido em touch — remove do layout */
+  .cursor-glow {
     display: none;
   }
 }

@@ -10,8 +10,8 @@
 html, body {
   font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
   height: 100%;
-  width: 100%; /* Garante largura total */
-  overflow-x: hidden; /* <--- O SEGREDO: Corta tudo que vazar lateralmente */
+  width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   background: var(--bg);
   color: var(--text);
