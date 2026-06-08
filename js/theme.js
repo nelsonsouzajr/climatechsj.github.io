@@ -22,7 +22,7 @@ export function initTheme() {
   }
 
   // 1. Carregar Estado Inicial
-  const saved = localStorage.getItem("climatech-theme") || "dark"; // Padrão Dark
+  const saved = localStorage.getItem("climatech-theme") || "light"; // Padrão Light
   html.setAttribute("data-theme", saved);
   updateIcon(saved);
 
